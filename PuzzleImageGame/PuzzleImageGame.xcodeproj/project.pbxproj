@@ -11,7 +11,6 @@
 		E7DB251819DFFBE7006DCB93 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7DB251719DFFBE7006DCB93 /* ViewController.swift */; };
 		E7DB251B19DFFBE7006DCB93 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7DB251919DFFBE7006DCB93 /* Main.storyboard */; };
 		E7DB251D19DFFBE7006DCB93 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E7DB251C19DFFBE7006DCB93 /* Images.xcassets */; };
-		E7DB252019DFFBE7006DCB93 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E7DB251E19DFFBE7006DCB93 /* LaunchScreen.xib */; };
 		E7DB252C19DFFBE7006DCB93 /* PuzzleImageGameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7DB252B19DFFBE7006DCB93 /* PuzzleImageGameTests.swift */; };
 /* End PBXBuildFile section */
 
@@ -32,7 +31,6 @@
 		E7DB251719DFFBE7006DCB93 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		E7DB251A19DFFBE7006DCB93 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E7DB251C19DFFBE7006DCB93 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		E7DB251F19DFFBE7006DCB93 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		E7DB252519DFFBE7006DCB93 /* PuzzleImageGameTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PuzzleImageGameTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7DB252A19DFFBE7006DCB93 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E7DB252B19DFFBE7006DCB93 /* PuzzleImageGameTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PuzzleImageGameTests.swift; sourceTree = "<group>"; };
@@ -81,7 +79,6 @@
 				E7DB251719DFFBE7006DCB93 /* ViewController.swift */,
 				E7DB251919DFFBE7006DCB93 /* Main.storyboard */,
 				E7DB251C19DFFBE7006DCB93 /* Images.xcassets */,
-				E7DB251E19DFFBE7006DCB93 /* LaunchScreen.xib */,
 				E7DB251319DFFBE7006DCB93 /* Supporting Files */,
 			);
 			path = PuzzleImageGame;
@@ -193,7 +190,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				E7DB251B19DFFBE7006DCB93 /* Main.storyboard in Resources */,
-				E7DB252019DFFBE7006DCB93 /* LaunchScreen.xib in Resources */,
 				E7DB251D19DFFBE7006DCB93 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -242,14 +238,6 @@
 				E7DB251A19DFFBE7006DCB93 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		E7DB251E19DFFBE7006DCB93 /* LaunchScreen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				E7DB251F19DFFBE7006DCB93 /* Base */,
-			);
-			name = LaunchScreen.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -407,6 +395,7 @@
 				E7DB253119DFFBE7006DCB93 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E7DB253219DFFBE7006DCB93 /* Build configuration list for PBXNativeTarget "PuzzleImageGameTests" */ = {
 			isa = XCConfigurationList;
@@ -415,6 +404,7 @@
 				E7DB253419DFFBE7006DCB93 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

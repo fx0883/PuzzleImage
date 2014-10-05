@@ -11,18 +11,7 @@
 		E7DB251819DFFBE7006DCB93 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7DB251719DFFBE7006DCB93 /* ViewController.swift */; };
 		E7DB251B19DFFBE7006DCB93 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7DB251919DFFBE7006DCB93 /* Main.storyboard */; };
 		E7DB251D19DFFBE7006DCB93 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E7DB251C19DFFBE7006DCB93 /* Images.xcassets */; };
-		E7DB252C19DFFBE7006DCB93 /* PuzzleImageGameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7DB252B19DFFBE7006DCB93 /* PuzzleImageGameTests.swift */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		E7DB252619DFFBE7006DCB93 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = E7DB250819DFFBE7006DCB93 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = E7DB250F19DFFBE7006DCB93;
-			remoteInfo = PuzzleImageGame;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		E7DB251019DFFBE7006DCB93 /* PuzzleImageGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PuzzleImageGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -31,20 +20,10 @@
 		E7DB251719DFFBE7006DCB93 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		E7DB251A19DFFBE7006DCB93 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E7DB251C19DFFBE7006DCB93 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		E7DB252519DFFBE7006DCB93 /* PuzzleImageGameTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PuzzleImageGameTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		E7DB252A19DFFBE7006DCB93 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E7DB252B19DFFBE7006DCB93 /* PuzzleImageGameTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PuzzleImageGameTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		E7DB250D19DFFBE7006DCB93 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		E7DB252219DFFBE7006DCB93 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -58,7 +37,6 @@
 			isa = PBXGroup;
 			children = (
 				E7DB251219DFFBE7006DCB93 /* PuzzleImageGame */,
-				E7DB252819DFFBE7006DCB93 /* PuzzleImageGameTests */,
 				E7DB251119DFFBE7006DCB93 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -67,7 +45,6 @@
 			isa = PBXGroup;
 			children = (
 				E7DB251019DFFBE7006DCB93 /* PuzzleImageGame.app */,
-				E7DB252519DFFBE7006DCB93 /* PuzzleImageGameTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -92,23 +69,6 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		E7DB252819DFFBE7006DCB93 /* PuzzleImageGameTests */ = {
-			isa = PBXGroup;
-			children = (
-				E7DB252B19DFFBE7006DCB93 /* PuzzleImageGameTests.swift */,
-				E7DB252919DFFBE7006DCB93 /* Supporting Files */,
-			);
-			path = PuzzleImageGameTests;
-			sourceTree = "<group>";
-		};
-		E7DB252919DFFBE7006DCB93 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				E7DB252A19DFFBE7006DCB93 /* Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -129,24 +89,6 @@
 			productReference = E7DB251019DFFBE7006DCB93 /* PuzzleImageGame.app */;
 			productType = "com.apple.product-type.application";
 		};
-		E7DB252419DFFBE7006DCB93 /* PuzzleImageGameTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = E7DB253219DFFBE7006DCB93 /* Build configuration list for PBXNativeTarget "PuzzleImageGameTests" */;
-			buildPhases = (
-				E7DB252119DFFBE7006DCB93 /* Sources */,
-				E7DB252219DFFBE7006DCB93 /* Frameworks */,
-				E7DB252319DFFBE7006DCB93 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				E7DB252719DFFBE7006DCB93 /* PBXTargetDependency */,
-			);
-			name = PuzzleImageGameTests;
-			productName = PuzzleImageGameTests;
-			productReference = E7DB252519DFFBE7006DCB93 /* PuzzleImageGameTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -158,10 +100,6 @@
 				TargetAttributes = {
 					E7DB250F19DFFBE7006DCB93 = {
 						CreatedOnToolsVersion = 6.0.1;
-					};
-					E7DB252419DFFBE7006DCB93 = {
-						CreatedOnToolsVersion = 6.0.1;
-						TestTargetID = E7DB250F19DFFBE7006DCB93;
 					};
 				};
 			};
@@ -179,7 +117,6 @@
 			projectRoot = "";
 			targets = (
 				E7DB250F19DFFBE7006DCB93 /* PuzzleImageGame */,
-				E7DB252419DFFBE7006DCB93 /* PuzzleImageGameTests */,
 			);
 		};
 /* End PBXProject section */
@@ -191,13 +128,6 @@
 			files = (
 				E7DB251B19DFFBE7006DCB93 /* Main.storyboard in Resources */,
 				E7DB251D19DFFBE7006DCB93 /* Images.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		E7DB252319DFFBE7006DCB93 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -213,23 +143,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E7DB252119DFFBE7006DCB93 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				E7DB252C19DFFBE7006DCB93 /* PuzzleImageGameTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		E7DB252719DFFBE7006DCB93 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = E7DB250F19DFFBE7006DCB93 /* PuzzleImageGame */;
-			targetProxy = E7DB252619DFFBE7006DCB93 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		E7DB251919DFFBE7006DCB93 /* Main.storyboard */ = {
@@ -342,40 +256,6 @@
 			};
 			name = Release;
 		};
-		E7DB253319DFFBE7006DCB93 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = PuzzleImageGameTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PuzzleImageGame.app/PuzzleImageGame";
-			};
-			name = Debug;
-		};
-		E7DB253419DFFBE7006DCB93 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = PuzzleImageGameTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PuzzleImageGame.app/PuzzleImageGame";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -393,15 +273,6 @@
 			buildConfigurations = (
 				E7DB253019DFFBE7006DCB93 /* Debug */,
 				E7DB253119DFFBE7006DCB93 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		E7DB253219DFFBE7006DCB93 /* Build configuration list for PBXNativeTarget "PuzzleImageGameTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				E7DB253319DFFBE7006DCB93 /* Debug */,
-				E7DB253419DFFBE7006DCB93 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

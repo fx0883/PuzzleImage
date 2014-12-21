@@ -1,0 +1,49 @@
+/* 
+  Localizable.strings
+  PuzzleGame
+
+  Created by Dong Yiming on 11/3/14.
+  Copyright (c) 2014 FS. All rights reserved.
+*/
+"welcome"="Loading, please wait...";
+"this is an awesome sharing" = "This is an awesome sharing!";
+"TEXT_TEST_MSG" = "It's a test message";
+"TEXT_SHARE_SUC" = "Shared!";
+"pull to refresh" = "Pull to refresh...";
+"release to refresh" = "Release to refresh...";
+"loading..." = "Loading...";
+"last_updated" = "Last Updated: %@";
+"stage_not_clear" = "Try fixing this picuture!";
+"top_record_sec" = "The record is %d Sec, Defeat it!";
+
+"close" = "Close";
+"stage_clear" = "Congras! You did it in %d Sec!";
+"original_picture" = "Orignal Picture";
+"you_did_it" = "Peice of cake!";
+"play_happyly" = "Play Happyly";
+"back" = "Back";
+"difficulty" = "Difficulty:";
+"start_play" = "Go!";
+
+"share_title" = "Crazy Puzzle";
+"share_message" = "This game drives me crazy! https://itunesconnect.apple.com/WebObjects/iTunesConnect.woa/ra/ng/app/921615471";
+
+"人物" = "People";
+"动漫" = "Comics";
+"动物" = "Animals";
+"卡通" = "Cartoon";
+"家居" = "House";
+"建筑" = "Architecture";
+"文艺" = "Art";
+"风景" = "Landscape";
+"我的图片"  = "Mine";
+
+"The difference between ordinary and extraordinary is that little extra." = "The difference between ordinary and extraordinary is that little extra.";
+
+"People who cannot find time for recreation are obliged sooner or later to find time for illness." = "People who cannot find time for recreation are obliged sooner or later to find time for illness.";
+
+"It is better to have loved and lost than never to have loved at all." = "It is better to have loved and lost than never to have loved at all.";
+
+"It doesn't matter what others think of you. It only matters what you think of yourself." = "It doesn't matter what others think of you. It only matters what you think of yourself.";
+
+"Success, it is not the position where you are standing, but which direction you are going." = "Success, it is not the position where you are standing, but which direction you are going.";

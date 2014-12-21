@@ -1,4 +1,0 @@
-PuzzleImage
-===========
-
-PuzzleImage

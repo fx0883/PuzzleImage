@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import Foundation
 
-class ImageListViewController: BaseViewController {
+class ImageListViewController: BaseViewController,UIActionSheetDelegate,UIImagePickerControllerDelegate,UINavigationControllerDelegate {
 
     
     @IBOutlet weak var mainCV: UICollectionView!
@@ -136,10 +137,8 @@ class ImageListViewController: BaseViewController {
         self.edgesForExtendedLayout = UIRectEdge.None
     }
     
-    func addImageClick(sender:UIButton)
-    {
-        
-    }
+
+
     
     
     func closeBtnClick(sender:UIButton!)
@@ -246,6 +245,205 @@ class ImageListViewController: BaseViewController {
     
     
     
+    func addImageClick(sender:UIButton)
+    {
+        //            [[[UIActionSheet alloc] initWithTitle:@"选择图片来源" delegate:self cancelButtonTitle:@"取消" destructiveButtonTitle:nil otherButtonTitles:@"内置图片",@"照像机",@"图库",@"相册", nil] showInView:self.view];
+        
+        //        let actionsheet:UIActionSheet = UIActionSheet(title: "选择图片来源", delegate: self, cancelButtonTitle: "取消", destructiveButtonTitle: nil,otherButtonTitles:@"内置图片",@"照像机",@"图库",@"相册", nil);
+        
+        let actionsheet:UIActionSheet = UIActionSheet(title: "选择图片来源", delegate: self, cancelButtonTitle: "取消", destructiveButtonTitle: nil, otherButtonTitles: "照像机","图库","相册")
+        //        otherButtonTitles firstButtonTitle: String, _ moreButtonTitles: String...)
+        actionsheet.showInView(self.view)
+    }
+    
+    func actionSheet(actionSheet: UIActionSheet, clickedButtonAtIndex buttonIndex: Int)
+    {
+        
+        //        UIImagePickerController * upc;
+        
+        
+        var upc:UIImagePickerController?
+        
+        switch (buttonIndex) {
+            
+        case 1://照像机
+            
+            if(UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera))
+            {
+                upc = UIImagePickerController()
+                upc!.sourceType = UIImagePickerControllerSourceType.Camera
+                upc!.delegate = self;
+                break;
+            }
+            break;
+            
+        case 2://图库
+            
+            //            upc = [[UIImagePickerController alloc] init];
+            //            upc.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+            //            upc.delegate=self;
+            //            [self presentModalViewController:upc animated:YES];
+            
+               upc = UIImagePickerController()
+               upc!.sourceType = UIImagePickerControllerSourceType.PhotoLibrary
+               upc!.delegate = self;
+               self.presentViewController(upc!, animated: true, completion: nil)
+            
+            
+            break;
+        case 3://相册
+            
+            
+                upc = UIImagePickerController()
+                upc!.sourceType = UIImagePickerControllerSourceType.SavedPhotosAlbum
+                upc!.delegate = self;
+                self.presentViewController(upc!, animated: true, completion: nil)
+
+            //            upc = [[UIImagePickerController alloc] init];
+            //            upc.sourceType = UIImagePickerControllerSourceTypeSavedPhotosAlbum;
+            //            upc.delegate=self;
+            //            [self presentModalViewController:upc animated:YES];
+            break;
+            
+        default:
+            break;
+            
+        }
+    }
+    
+//    -(void)imagePickerController:(UIImagePickerController *)picker didFinishPickingImage:(UIImage *)image editingInfo:(NSDictionary *)editingInfo{
+//    
+//    [self dismissModalViewControllerAnimated:YES];
+//    int width = CGImageGetWidth(image.CGImage);
+//    int height = CGImageGetHeight(image.CGImage);
+//    int minValue = MIN(width, height);
+//    
+//    if (minValue>320) {
+//    int imageWidth=320;
+//    
+//    CGImageRef srcCopy = CGImageCreateWithImageInRect(image.CGImage, CGRectMake(0, 0, minValue, minValue));
+//    UIImage * newImage = [UIImage imageWithCGImage:srcCopy];
+//    
+//    UIGraphicsBeginImageContext(CGSizeMake(imageWidth, imageWidth));
+//    [newImage drawInRect:CGRectMake(0, 0, imageWidth, imageWidth)];
+//    [gameView setGameImage:UIGraphicsGetImageFromCurrentImageContext().CGImage];
+//    UIGraphicsEndImageContext();
+//    
+//    CGImageRelease(image.CGImage);
+//    }else {
+//    [gameView setGameImage:CGImageCreateWithImageInRect(image.CGImage, CGRectMake(0, 0, minValue, minValue))];
+//    
+//    CGImageRelease(image.CGImage);
+//    }
+//    
+//    }
+    
+    
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: NSDictionary!)
+    {
+        //    [self dismissModalViewControllerAnimated:YES];
+        self.dismissViewControllerAnimated(true, completion: nil)
+        
+        var image:UIImage!
+        
+        if picker.allowsEditing {
+            image = info.objectForKey(UIImagePickerControllerEditedImage) as UIImage
+        }else{
+            image = info.objectForKey(UIImagePickerControllerOriginalImage) as UIImage
+        }
+//        let image:UIImage = info as UIImage;
+        var width:UInt = CGImageGetWidth(image.CGImage)
+        var height:UInt = CGImageGetHeight(image.CGImage)
+        //    int width = CGImageGetWidth(image.CGImage);
+        //    int height = CGImageGetHeight(image.CGImage);
+        
+
+        var    minValue:UInt = min(width, height)
+        //
+        var newImage:UIImage? = nil;
+            if (minValue>320) {
+        var imageWidth:CGFloat=CGFloat(320);
+        
+        //    CGImageRef srcCopy = CGImageCreateWithImageInRect(image.CGImage, CGRectMake(0, 0, minValue, minValue));
+        let scrCopy:CGImageRef = CGImageCreateWithImageInRect(image.CGImage, CGRectMake(0, 0, CGFloat(minValue), CGFloat(minValue)))
+               // [UIImage imageWithCGImage:srcCopy];
+                
+//                       newImage = UIImage(CGImage: CGImageCreateWithImageInRect(image.CGImage, CGRectMake(0, 0, CGFloat(minValue), CGFloat(minValue))))!
+        newImage = UIImage(CGImage: scrCopy)!
+        //
+            UIGraphicsBeginImageContext(CGSizeMake(imageWidth, imageWidth));
+        //    [newImage drawInRect:CGRectMake(0, 0, imageWidth, imageWidth)];
+            newImage!.drawInRect(CGRectMake(0, 0, imageWidth, imageWidth))
+        //    [gameView setGameImage:UIGraphicsGetImageFromCurrentImageContext().CGImage];
+            
+            UIGraphicsEndImageContext();
+        //
+        //    CGImageRelease(image.CGImage);
+        //    }else {
+        //    [gameView setGameImage:CGImageCreateWithImageInRect(image.CGImage, CGRectMake(0, 0, minValue, minValue))];
+        //    
+        //    CGImageRelease(image.CGImage);
+            }
+        else
+            {
+              newImage = UIImage(CGImage: CGImageCreateWithImageInRect(image.CGImage, CGRectMake(0, 0, CGFloat(minValue), CGFloat(minValue))))!
+        }
+        
+//        NSData *data;
+        var data:NSData
+        
+//
+//        if (UIImagePNGRepresentation(newImage) == nil) {
+//            
+//            data = UIImageJPEGRepresentation(newImage, 1);
+//            
+//        }
+//        else
+//        {
+//            
+//            data = UIImagePNGRepresentation(newImage);
+//            
+//        }
+        
+        
+          data = UIImageJPEGRepresentation(newImage, 1);
+//
+//        UIImagePNGRepresentation转换PNG格式的图片为二进制，如果图片的格式为JPEG则返回nil；
+//        [fileManager createFileAtPath:[filePath stringByAppendingString:@"/image.png"] contents:data attributes:nil];    将图片保存为PNG格式
+//        
+//        [fileManager createFileAtPath:[filePath stringByAppendingString:@"/image.jpg"] contents:data attributes:nil];   将图片保存为JPEG格式
+        // NSUUID().UUIDString;
+        
+        
+        let itemImageInfo:ImageInfo = ImageInfo.MR_createEntity()
+        itemImageInfo.id = NSUUID().UUIDString;
+        itemImageInfo.categoryid = CUSTOMFOLDERID
+        itemImageInfo.fastesttime=nil
+        
+        //这里用md5码
+        var strPath:NSString = NSString(format: "%@.jpg", itemImageInfo.id)
+        
+        itemImageInfo.path = strPath
+        itemImageInfo.isfinished = NSNumber(bool: false)
+        
+        
+        strPath = strPath.lastPathComponent
+        //                println("\(itemImageInfo.path)")
+        
+        itemImageInfo.path = CUSTOMFOLDERID+"/"+strPath
+        
+    //    println("\(itemImageInfo.path)")
+        
+        //        [fileManager createFileAtPath:[filePath stringByAppendingString:@"/image.jpg"] contents:data attributes:nil];
+        var imagePath:NSString = NSString(format: "%@/%@",BMSandbox.sharedInstance().docPath,itemImageInfo.path)
+        
+        var str:String = String(imagePath)
+        
+        println(imagePath)
+        
+        NSFileManager.defaultManager().createFileAtPath(imagePath, contents: data, attributes: nil);
+        
+    }
     
     /*
     // MARK: - Navigation

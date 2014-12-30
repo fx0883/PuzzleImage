@@ -38,6 +38,13 @@
 "风景" = "Landscape";
 "我的图片"  = "Mine";
 
+
+"选择图片来源" = "Select Image Source";
+"照像机" = "Camera";
+"图库" = "Photo Library";
+"相册" = "Album";
+"取消" = "Cancel";
+
 "The difference between ordinary and extraordinary is that little extra." = "The difference between ordinary and extraordinary is that little extra.";
 
 "People who cannot find time for recreation are obliged sooner or later to find time for illness." = "People who cannot find time for recreation are obliged sooner or later to find time for illness.";

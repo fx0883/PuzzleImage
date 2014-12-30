@@ -13,4 +13,8 @@
 
 +(UIImage*)loadImage:(NSString*)path;
 
+
+
 @end
+
+

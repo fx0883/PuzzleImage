@@ -42,6 +42,8 @@
 		E76591DC1A0485F1000B44B0 /* CHANGELOG.md in Sources */ = {isa = PBXBuildFile; fileRef = E76591B91A0485F1000B44B0 /* CHANGELOG.md */; };
 		E76591DD1A0485F1000B44B0 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = E76591CE1A0485F1000B44B0 /* README.md */; };
 		E76591E11A048778000B44B0 /* ACPReminder.m in Sources */ = {isa = PBXBuildFile; fileRef = E76591E01A048778000B44B0 /* ACPReminder.m */; };
+		E76A9BA21A52E14800FAEF3E /* NSData+Ext.m in Sources */ = {isa = PBXBuildFile; fileRef = E76A9BA11A52E14800FAEF3E /* NSData+Ext.m */; };
+		E76A9BA41A52FD6D00FAEF3E /* bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E76A9BA31A52FD6D00FAEF3E /* bg@2x.png */; };
 		E786A3791A01E88200EC0A94 /* ImageInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = E786A3781A01E88200EC0A94 /* ImageInfo.m */; };
 		E78AF6FE19FFCB2600E4F18C /* AGViewDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E78AF6FD19FFCB2600E4F18C /* AGViewDelegate.m */; };
 		E79B22D71A035FA900CAF0FA /* ShareGameView.m in Sources */ = {isa = PBXBuildFile; fileRef = E79B22D61A035FA900CAF0FA /* ShareGameView.m */; };
@@ -234,6 +236,9 @@
 		E76591D81A0485F1000B44B0 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/AppiraterLocalizable.strings"; sourceTree = "<group>"; };
 		E76591DF1A048778000B44B0 /* ACPReminder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACPReminder.h; sourceTree = "<group>"; };
 		E76591E01A048778000B44B0 /* ACPReminder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACPReminder.m; sourceTree = "<group>"; };
+		E76A9BA01A52E14800FAEF3E /* NSData+Ext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Ext.h"; sourceTree = "<group>"; };
+		E76A9BA11A52E14800FAEF3E /* NSData+Ext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Ext.m"; sourceTree = "<group>"; };
+		E76A9BA31A52FD6D00FAEF3E /* bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg@2x.png"; sourceTree = "<group>"; };
 		E786A3771A01E88200EC0A94 /* ImageInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageInfo.h; sourceTree = "<group>"; };
 		E786A3781A01E88200EC0A94 /* ImageInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageInfo.m; sourceTree = "<group>"; };
 		E78AF6FC19FFCB2600E4F18C /* AGViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGViewDelegate.h; sourceTree = "<group>"; };
@@ -619,6 +624,7 @@
 		E74125B41A46B97F003E7142 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				E76A9BA31A52FD6D00FAEF3E /* bg@2x.png */,
 				E74125B51A46B98E003E7142 /* customFolder.jpg */,
 			);
 			path = images;
@@ -660,6 +666,8 @@
 			children = (
 				E75D6ED919E8FFD300A1F6C9 /* CommonalityFunction.h */,
 				E75D6EDA19E8FFD300A1F6C9 /* CommonalityFunction.m */,
+				E76A9BA01A52E14800FAEF3E /* NSData+Ext.h */,
+				E76A9BA11A52E14800FAEF3E /* NSData+Ext.m */,
 			);
 			path = OCParty;
 			sourceTree = SOURCE_ROOT;
@@ -1165,6 +1173,7 @@
 				E7E30E6219E7C9CF00DFB777 /* Images.xcassets in Resources */,
 				F836560F1A07B2EC00DC0B90 /* OriginalPicViewController.xib in Resources */,
 				E76591DA1A0485F1000B44B0 /* Appirater.podspec.json in Resources */,
+				E76A9BA41A52FD6D00FAEF3E /* bg@2x.png in Resources */,
 				E7C7498B19FF98D700B24716 /* Resource.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1200,6 +1209,7 @@
 				E7E30E5B19E7C9CF00DFB777 /* AppDelegate.swift in Sources */,
 				E79B22E31A0366BB00CAF0FA /* ASDepthModalViewController.m in Sources */,
 				E7C2EEA019FE64C6006BB38A /* BaseViewController.m in Sources */,
+				E76A9BA21A52E14800FAEF3E /* NSData+Ext.m in Sources */,
 				E71146C619FF916700809550 /* ShareSDKManager.m in Sources */,
 				E76591E11A048778000B44B0 /* ACPReminder.m in Sources */,
 				E7E30E8219E7CB0900DFB777 /* PuzzleImage.xcdatamodeld in Sources */,

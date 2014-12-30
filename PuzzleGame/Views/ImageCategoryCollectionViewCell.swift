@@ -38,10 +38,10 @@ class ImageCategoryCollectionViewCell: UICollectionViewCell {
         }
         else
         {
-            if(imagecategory.imagepath==CustomFolderPathImage)
+            if(imagecategory.id == CUSTOMFOLDERID)
             {
                 titleLabel.text = "Mine"
-                path = CustomFolderPathImage;
+                path = String(imagecategory.imagepath)
                 imvMain.image = UIImage(named: path!)
             }
             else

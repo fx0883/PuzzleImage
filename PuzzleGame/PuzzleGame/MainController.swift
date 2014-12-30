@@ -164,7 +164,11 @@ class MainController: BaseViewController {
             {
                 let randomNumber:Int = self.randomEx(itemAry.count)
                 let imageinfo:ImageInfo = itemAry.objectAtIndex(randomNumber) as ImageInfo
-                item.imagepath = imageinfo.path
+                if(imageCategoryitem.id != CUSTOMFOLDERID)
+                {
+                    item.imagepath = imageinfo.path
+                }
+                
             }
         }
         

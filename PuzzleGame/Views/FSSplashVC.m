@@ -27,7 +27,7 @@
     self.view.backgroundColor = [UIColor whiteColor];
     _ivSplash = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"bg"]];
     _ivSplash.contentMode = UIViewContentModeScaleAspectFit;
-    _ivSplash.alpha = 0;
+    _ivSplash.alpha = 1;
     [self.view addSubview:_ivSplash];
     [_ivSplash alignToView:self.view];
     
@@ -76,7 +76,7 @@
     
     _ivSplash.alpha = 1.f;
     [UIView animateWithDuration:.5f animations:^{
-        _ivSplash.alpha = 0.f;
+        _ivSplash.alpha = 0.9f;
     } completion:^(BOOL finished) {
         if (aCompletion) {
             aCompletion(finished);

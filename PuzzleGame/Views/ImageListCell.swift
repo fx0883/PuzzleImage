@@ -24,7 +24,21 @@ class ImageListCell: UICollectionViewCell {
         if(imageinfo.path != nil)
         {
             var path:String?=nil
-            path = (BMContext.sharedInstance().getContextDicForKey(COREBUNDLENAME) as String) + "/" + imageinfo.path
+            if(imageinfo.categoryid==CUSTOMFOLDERID)
+            {
+                
+                var imagePath:NSString = NSString(format: "%@/%@",BMSandbox.sharedInstance().docPath,imageinfo.path)
+                
+                path = String(imagePath)
+                //                path = NSString(format: "%@/%@/%@", BMSandbox.appPath(),CUSTOMFOLDERID,imageinfo.path)
+                               // path = BMSandbox.appPath() + "/" + CUSTOMFOLDERID + "/" + imageinfo.path
+            }
+            else
+            {
+                path = (BMContext.sharedInstance().getContextDicForKey(COREBUNDLENAME) as String) + "/" + imageinfo.path
+            }
+            
+            
             imvMain.image = UIImage(contentsOfFile: path!)
         }
               imvMain.applyEffectRoundRectSilverBorder(UIColor.whiteColor())

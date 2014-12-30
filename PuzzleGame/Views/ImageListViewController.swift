@@ -251,7 +251,13 @@ class ImageListViewController: BaseViewController,UIActionSheetDelegate,UIImageP
         
         //        let actionsheet:UIActionSheet = UIActionSheet(title: "选择图片来源", delegate: self, cancelButtonTitle: "取消", destructiveButtonTitle: nil,otherButtonTitles:@"内置图片",@"照像机",@"图库",@"相册", nil);
         
-        let actionsheet:UIActionSheet = UIActionSheet(title: "选择图片来源", delegate: self, cancelButtonTitle: "取消", destructiveButtonTitle: nil, otherButtonTitles: "照像机","图库","相册")
+        var selectedPathSourceStr:NSString = CommonUtil.localStringForImageCategory("选择图片来源")
+        var cameraStr:NSString = CommonUtil.localStringForImageCategory("照像机")
+        var photolibraryStr:NSString = CommonUtil.localStringForImageCategory("图库")
+        var photoAlbumStr:NSString = CommonUtil.localStringForImageCategory("相册")
+        var cancelStr:NSString = CommonUtil.localStringForImageCategory("取消")
+        
+        let actionsheet:UIActionSheet = UIActionSheet(title: selectedPathSourceStr, delegate: self, cancelButtonTitle: cancelStr, destructiveButtonTitle: nil, otherButtonTitles: cameraStr,photolibraryStr,photoAlbumStr)
         //        otherButtonTitles firstButtonTitle: String, _ moreButtonTitles: String...)
         actionsheet.showInView(self.view)
     }
@@ -415,8 +421,23 @@ class ImageListViewController: BaseViewController,UIActionSheetDelegate,UIImageP
         // NSUUID().UUIDString;
         
         
+        
+        var md5Data:NSString = data.md5()
+        
+        //MR_findByAttribute:(NSString *)attribute withValue:(id)searchValue;
+        var array:NSArray = ImageInfo.MR_findByAttribute("id", withValue:md5Data)
+        if(array.count > 0)
+        {
+            return;
+        }
+        
+        
         let itemImageInfo:ImageInfo = ImageInfo.MR_createEntity()
-        itemImageInfo.id = NSUUID().UUIDString;
+        
+
+        
+        
+        itemImageInfo.id = md5Data
         itemImageInfo.categoryid = CUSTOMFOLDERID
         itemImageInfo.fastesttime=nil
         
@@ -443,7 +464,19 @@ class ImageListViewController: BaseViewController,UIActionSheetDelegate,UIImageP
         
         NSFileManager.defaultManager().createFileAtPath(imagePath, contents: data, attributes: nil);
         
+        NSManagedObjectContext.MR_defaultContext().MR_saveToPersistentStoreAndWait()
+        
+        self.refreshView()
+        
     }
+    
+    
+  func refreshView()
+  {
+    self.loadData()
+    self.mainCV.reloadData()
+  }
+    
     
     /*
     // MARK: - Navigation

@@ -15,7 +15,7 @@ let CUSTOMFOLDERID:String = "CUSTOMFOLDERID"
 
 let CustomFolderPath:String = NSString(format: "%@/%@", BMSandbox.sharedInstance().docPath,"CUSTOMFOLDERID");
 
-let CustomFolderPathImage:String = "customFolder"
+//let CustomFolderPathImage:String = "customFolder"
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {

@@ -12,6 +12,7 @@
 #import "ImageCategory.h"
 
 #import "CommonalityFunction.h"
+#import "NSData+Ext.h"
 
 #import "SourceImageVC.h"
 #import "Card.h"
@@ -31,4 +32,6 @@
 
 #import "ShareGameView.h"
 #import "ACPReminder.h"
+
+
 

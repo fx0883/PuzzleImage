@@ -78,7 +78,22 @@ class OriginalPicViewController: BaseViewController {
         if(self.curImageInfo?.path != nil)
         {
             
-            path = (BMContext.sharedInstance().getContextDicForKey(COREBUNDLENAME) as String) + "/" + self.curImageInfo!.path
+            if(self.curImageInfo!.categoryid==CUSTOMFOLDERID)
+            {
+                
+                var imagePath:NSString = NSString(format: "%@/%@",BMSandbox.sharedInstance().docPath,curImageInfo!.path)
+                
+                path = String(imagePath)
+                //                path = NSString(format: "%@/%@/%@", BMSandbox.appPath(),CUSTOMFOLDERID,imageinfo.path)
+                // path = BMSandbox.appPath() + "/" + CUSTOMFOLDERID + "/" + imageinfo.path
+            }
+            else
+            {
+                path = (BMContext.sharedInstance().getContextDicForKey(COREBUNDLENAME) as String) + "/" + self.curImageInfo!.path
+            }
+            
+            
+//            path = (BMContext.sharedInstance().getContextDicForKey(COREBUNDLENAME) as String) + "/" + self.curImageInfo!.path
             
             let image:UIImage = UIImage(contentsOfFile: path!)!
             

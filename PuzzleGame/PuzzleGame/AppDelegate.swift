@@ -56,17 +56,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func loadUIACPReminder()
     {
-//        ACPReminder * localNotifications = [ACPReminder sharedManager];
-//        
-//        //Settings
-//        localNotifications.messages = @[@"Example 1", @"Example 2", @"Example 3", @"Example 4", @"Example 5"];
-//        localNotifications.timePeriods = @[@(1),@(10),@(15)]; //days
-//        localNotifications.appDomain = @"com.mydomain.appName";
-//        localNotifications.randomMessage = NO; //By default is NO (optional)
-//        localNotifications.testFlagInSeconds = YES; //By default is NO (optional) --> For testing purpose only!
-//        localNotifications.circularTimePeriod = YES; // By default is NO (optional)
-//        
-//        [localNotifications createLocalNotification];
+
         let localNotifications:ACPReminder = ACPReminder.sharedManager()
         let strExample1:String =  NSLocalizedString("The difference between ordinary and extraordinary is that little extra.", comment: "")
                 let strExample2:String =  NSLocalizedString("People who cannot find time for recreation are obliged sooner or later to find time for illness.", comment: "")
@@ -76,10 +66,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         
         localNotifications.messages = [strExample1, strExample2,strExample3, strExample4, strExample5]
-        localNotifications.timePeriods = [(7),(10)]
+        localNotifications.timePeriods = [(1),(2),(3),(4),(5),(6),(7),(8),(9),(10),(11),(12),(13),(14),(15),(16),(17),(18),(19),(20),(21),(22),(23),(24),(25),(26),(27),(28)]
+        
+           //     localNotifications.timePeriods = [(1)]
+
         localNotifications.appDomain = "com.CrazyPuzzle.app2"
         localNotifications.randomMessage = true //By default is NO (optional)
-        localNotifications.testFlagInSeconds = false //By default is NO (optional) --> For testing purpose only!
+        localNotifications.testFlagInSeconds = false //By default is NO (optional) --> For testing purpose only! 
         localNotifications.circularTimePeriod = true // By default is NO (optional)
         //
         //        [localNotifications createLocalNotification];
@@ -281,6 +274,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        [[UIApplication sharedApplication] setApplicationIconBadgeNumber:0];
 //        [[ACPReminder sharedManager] checkIfLocalNotificationHasBeenTriggered];
 
+        
         UIApplication.sharedApplication().applicationIconBadgeNumber = 0
         ACPReminder.sharedManager().checkIfLocalNotificationHasBeenTriggered()
         

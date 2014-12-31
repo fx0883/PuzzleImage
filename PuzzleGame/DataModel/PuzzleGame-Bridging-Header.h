@@ -13,6 +13,7 @@
 
 #import "CommonalityFunction.h"
 #import "NSData+Ext.h"
+#import "UIImage+fixOrientation.h"
 
 #import "SourceImageVC.h"
 #import "Card.h"

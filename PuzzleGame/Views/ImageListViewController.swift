@@ -279,6 +279,7 @@ class ImageListViewController: BaseViewController,UIActionSheetDelegate,UIImageP
                 upc = UIImagePickerController()
                 upc!.sourceType = UIImagePickerControllerSourceType.Camera
                 upc!.delegate = self;
+                self.presentViewController(upc!, animated: true, completion: nil)
                 break;
             }
             break;
@@ -317,32 +318,7 @@ class ImageListViewController: BaseViewController,UIActionSheetDelegate,UIImageP
         }
     }
     
-//    -(void)imagePickerController:(UIImagePickerController *)picker didFinishPickingImage:(UIImage *)image editingInfo:(NSDictionary *)editingInfo{
-//    
-//    [self dismissModalViewControllerAnimated:YES];
-//    int width = CGImageGetWidth(image.CGImage);
-//    int height = CGImageGetHeight(image.CGImage);
-//    int minValue = MIN(width, height);
-//    
-//    if (minValue>320) {
-//    int imageWidth=320;
-//    
-//    CGImageRef srcCopy = CGImageCreateWithImageInRect(image.CGImage, CGRectMake(0, 0, minValue, minValue));
-//    UIImage * newImage = [UIImage imageWithCGImage:srcCopy];
-//    
-//    UIGraphicsBeginImageContext(CGSizeMake(imageWidth, imageWidth));
-//    [newImage drawInRect:CGRectMake(0, 0, imageWidth, imageWidth)];
-//    [gameView setGameImage:UIGraphicsGetImageFromCurrentImageContext().CGImage];
-//    UIGraphicsEndImageContext();
-//    
-//    CGImageRelease(image.CGImage);
-//    }else {
-//    [gameView setGameImage:CGImageCreateWithImageInRect(image.CGImage, CGRectMake(0, 0, minValue, minValue))];
-//    
-//    CGImageRelease(image.CGImage);
-//    }
-//    
-//    }
+
     
     
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: NSDictionary!)
@@ -357,38 +333,40 @@ class ImageListViewController: BaseViewController,UIActionSheetDelegate,UIImageP
         }else{
             image = info.objectForKey(UIImagePickerControllerOriginalImage) as UIImage
         }
+        
+        image! = image!.fixOrientation();
 //        let image:UIImage = info as UIImage;
         var width:UInt = CGImageGetWidth(image.CGImage)
         var height:UInt = CGImageGetHeight(image.CGImage)
-        //    int width = CGImageGetWidth(image.CGImage);
-        //    int height = CGImageGetHeight(image.CGImage);
-        
 
+        let isWidthlength = width>height
+        
         var    minValue:UInt = min(width, height)
         //
         var newImage:UIImage? = nil;
             if (minValue>320) {
         var imageWidth:CGFloat=CGFloat(320);
         
-        //    CGImageRef srcCopy = CGImageCreateWithImageInRect(image.CGImage, CGRectMake(0, 0, minValue, minValue));
-        let scrCopy:CGImageRef = CGImageCreateWithImageInRect(image.CGImage, CGRectMake(0, 0, CGFloat(minValue), CGFloat(minValue)))
-               // [UIImage imageWithCGImage:srcCopy];
-                
-//                       newImage = UIImage(CGImage: CGImageCreateWithImageInRect(image.CGImage, CGRectMake(0, 0, CGFloat(minValue), CGFloat(minValue))))!
-        newImage = UIImage(CGImage: scrCopy)!
-        //
-            UIGraphicsBeginImageContext(CGSizeMake(imageWidth, imageWidth));
-        //    [newImage drawInRect:CGRectMake(0, 0, imageWidth, imageWidth)];
-            newImage!.drawInRect(CGRectMake(0, 0, imageWidth, imageWidth))
-        //    [gameView setGameImage:UIGraphicsGetImageFromCurrentImageContext().CGImage];
+        var rect:CGRect?
+        
+        if(isWidthlength)
+        {
+            rect=CGRectMake(CGFloat((width-height)/2), 0, CGFloat(minValue), CGFloat(minValue))
+        }
+        else
+        {
+            rect=CGRectMake(0, CGFloat((height-width)/2), CGFloat(minValue), CGFloat(minValue))
+        }
             
-            UIGraphicsEndImageContext();
-        //
-        //    CGImageRelease(image.CGImage);
-        //    }else {
-        //    [gameView setGameImage:CGImageCreateWithImageInRect(image.CGImage, CGRectMake(0, 0, minValue, minValue))];
-        //    
-        //    CGImageRelease(image.CGImage);
+        let scrCopy:CGImageRef = CGImageCreateWithImageInRect(image.CGImage,rect!)
+
+        newImage = UIImage(CGImage: scrCopy)!
+
+        UIGraphicsBeginImageContext(CGSizeMake(imageWidth, imageWidth));
+        newImage!.drawInRect(CGRectMake(0, 0, imageWidth, imageWidth))
+        newImage = UIGraphicsGetImageFromCurrentImageContext();
+        UIGraphicsEndImageContext();
+        
             }
         else
             {
@@ -398,21 +376,9 @@ class ImageListViewController: BaseViewController,UIActionSheetDelegate,UIImageP
 //        NSData *data;
         var data:NSData
         
-//
-//        if (UIImagePNGRepresentation(newImage) == nil) {
-//            
-//            data = UIImageJPEGRepresentation(newImage, 1);
-//            
-//        }
-//        else
-//        {
-//            
-//            data = UIImagePNGRepresentation(newImage);
-//            
-//        }
         
         
-          data = UIImageJPEGRepresentation(newImage, 1);
+          data = UIImageJPEGRepresentation(newImage, 0.3);
 //
 //        UIImagePNGRepresentation转换PNG格式的图片为二进制，如果图片的格式为JPEG则返回nil；
 //        [fileManager createFileAtPath:[filePath stringByAppendingString:@"/image.png"] contents:data attributes:nil];    将图片保存为PNG格式

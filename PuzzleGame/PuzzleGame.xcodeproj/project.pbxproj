@@ -30,12 +30,12 @@
 		E71146C219FF8C1600809550 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E71146C119FF8C1600809550 /* AddressBook.framework */; };
 		E71146C619FF916700809550 /* ShareSDKManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E71146C519FF916700809550 /* ShareSDKManager.m */; };
 		E71F5A9219FD28F6000BD3D2 /* OriginalPicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E71F5A9019FD28F6000BD3D2 /* OriginalPicViewController.swift */; };
-		E74125B31A46A7EF003E7142 /* libBMCoreFramework.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E74125B21A46A7EF003E7142 /* libBMCoreFramework.a */; };
 		E74125B61A46B98E003E7142 /* customFolder.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E74125B51A46B98E003E7142 /* customFolder.jpg */; };
 		E75D6ED619E8C37100A1F6C9 /* ImageCategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E75D6ED419E8C37100A1F6C9 /* ImageCategoryCollectionViewCell.swift */; };
 		E75D6ED719E8C37100A1F6C9 /* ImageCategoryCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E75D6ED519E8C37100A1F6C9 /* ImageCategoryCollectionViewCell.xib */; };
 		E75D6EDB19E8FFD300A1F6C9 /* CommonalityFunction.m in Sources */ = {isa = PBXBuildFile; fileRef = E75D6EDA19E8FFD300A1F6C9 /* CommonalityFunction.m */; };
 		E75D6EDE19E909B700A1F6C9 /* PuzzleContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = E75D6EDD19E909B700A1F6C9 /* PuzzleContext.swift */; };
+		E7632BD91A539F5500FFFBA4 /* UIImage+fixOrientation.m in Sources */ = {isa = PBXBuildFile; fileRef = E7632BD81A539F5500FFFBA4 /* UIImage+fixOrientation.m */; };
 		E76591D91A0485F1000B44B0 /* Appirater.m in Sources */ = {isa = PBXBuildFile; fileRef = E76591B31A0485F1000B44B0 /* Appirater.m */; };
 		E76591DA1A0485F1000B44B0 /* Appirater.podspec.json in Resources */ = {isa = PBXBuildFile; fileRef = E76591B41A0485F1000B44B0 /* Appirater.podspec.json */; };
 		E76591DB1A0485F1000B44B0 /* AppiraterLocalizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = E76591B61A0485F1000B44B0 /* AppiraterLocalizable.strings */; };
@@ -44,6 +44,7 @@
 		E76591E11A048778000B44B0 /* ACPReminder.m in Sources */ = {isa = PBXBuildFile; fileRef = E76591E01A048778000B44B0 /* ACPReminder.m */; };
 		E76A9BA21A52E14800FAEF3E /* NSData+Ext.m in Sources */ = {isa = PBXBuildFile; fileRef = E76A9BA11A52E14800FAEF3E /* NSData+Ext.m */; };
 		E76A9BA41A52FD6D00FAEF3E /* bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E76A9BA31A52FD6D00FAEF3E /* bg@2x.png */; };
+		E76A9BA61A52FFC200FAEF3E /* libBMCoreFramework.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E76A9BA51A52FFC200FAEF3E /* libBMCoreFramework.a */; };
 		E786A3791A01E88200EC0A94 /* ImageInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = E786A3781A01E88200EC0A94 /* ImageInfo.m */; };
 		E78AF6FE19FFCB2600E4F18C /* AGViewDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E78AF6FD19FFCB2600E4F18C /* AGViewDelegate.m */; };
 		E79B22D71A035FA900CAF0FA /* ShareGameView.m in Sources */ = {isa = PBXBuildFile; fileRef = E79B22D61A035FA900CAF0FA /* ShareGameView.m */; };
@@ -189,13 +190,14 @@
 		E71146C419FF916700809550 /* ShareSDKManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShareSDKManager.h; sourceTree = "<group>"; };
 		E71146C519FF916700809550 /* ShareSDKManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShareSDKManager.m; sourceTree = "<group>"; };
 		E71F5A9019FD28F6000BD3D2 /* OriginalPicViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OriginalPicViewController.swift; sourceTree = "<group>"; };
-		E74125B21A46A7EF003E7142 /* libBMCoreFramework.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libBMCoreFramework.a; sourceTree = "<group>"; };
 		E74125B51A46B98E003E7142 /* customFolder.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = customFolder.jpg; sourceTree = "<group>"; };
 		E75D6ED419E8C37100A1F6C9 /* ImageCategoryCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCategoryCollectionViewCell.swift; sourceTree = "<group>"; };
 		E75D6ED519E8C37100A1F6C9 /* ImageCategoryCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImageCategoryCollectionViewCell.xib; sourceTree = "<group>"; };
 		E75D6ED919E8FFD300A1F6C9 /* CommonalityFunction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonalityFunction.h; sourceTree = "<group>"; };
 		E75D6EDA19E8FFD300A1F6C9 /* CommonalityFunction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommonalityFunction.m; sourceTree = "<group>"; };
 		E75D6EDD19E909B700A1F6C9 /* PuzzleContext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PuzzleContext.swift; sourceTree = "<group>"; };
+		E7632BD71A539F5500FFFBA4 /* UIImage+fixOrientation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+fixOrientation.h"; sourceTree = "<group>"; };
+		E7632BD81A539F5500FFFBA4 /* UIImage+fixOrientation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+fixOrientation.m"; sourceTree = "<group>"; };
 		E76591B21A0485F1000B44B0 /* Appirater.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Appirater.h; sourceTree = "<group>"; };
 		E76591B31A0485F1000B44B0 /* Appirater.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Appirater.m; sourceTree = "<group>"; };
 		E76591B41A0485F1000B44B0 /* Appirater.podspec.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Appirater.podspec.json; sourceTree = "<group>"; };
@@ -239,6 +241,7 @@
 		E76A9BA01A52E14800FAEF3E /* NSData+Ext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Ext.h"; sourceTree = "<group>"; };
 		E76A9BA11A52E14800FAEF3E /* NSData+Ext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Ext.m"; sourceTree = "<group>"; };
 		E76A9BA31A52FD6D00FAEF3E /* bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg@2x.png"; sourceTree = "<group>"; };
+		E76A9BA51A52FFC200FAEF3E /* libBMCoreFramework.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libBMCoreFramework.a; sourceTree = "<group>"; };
 		E786A3771A01E88200EC0A94 /* ImageInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageInfo.h; sourceTree = "<group>"; };
 		E786A3781A01E88200EC0A94 /* ImageInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageInfo.m; sourceTree = "<group>"; };
 		E78AF6FC19FFCB2600E4F18C /* AGViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGViewDelegate.h; sourceTree = "<group>"; };
@@ -475,7 +478,7 @@
 				E7C2EEC219FE66AE006BB38A /* SystemConfiguration.framework in Frameworks */,
 				E7C7498419FF98D700B24716 /* SinaWeiboConnection.framework in Frameworks */,
 				E7C2EEC019FE66A0006BB38A /* StoreKit.framework in Frameworks */,
-				E74125B31A46A7EF003E7142 /* libBMCoreFramework.a in Frameworks */,
+				E76A9BA61A52FFC200FAEF3E /* libBMCoreFramework.a in Frameworks */,
 				E7C7498F19FF98D700B24716 /* libSinaWeiboSDK.a in Frameworks */,
 				E71145CF19FF4D7400809550 /* libGoogleAdMobAds.a in Frameworks */,
 				E7C7499519FF98D700B24716 /* ShareSDKFlatShareViewUI.framework in Frameworks */,
@@ -668,6 +671,8 @@
 				E75D6EDA19E8FFD300A1F6C9 /* CommonalityFunction.m */,
 				E76A9BA01A52E14800FAEF3E /* NSData+Ext.h */,
 				E76A9BA11A52E14800FAEF3E /* NSData+Ext.m */,
+				E7632BD71A539F5500FFFBA4 /* UIImage+fixOrientation.h */,
+				E7632BD81A539F5500FFFBA4 /* UIImage+fixOrientation.m */,
 			);
 			path = OCParty;
 			sourceTree = SOURCE_ROOT;
@@ -818,7 +823,7 @@
 		E7E30E4C19E7C9CE00DFB777 = {
 			isa = PBXGroup;
 			children = (
-				E74125B21A46A7EF003E7142 /* libBMCoreFramework.a */,
+				E76A9BA51A52FFC200FAEF3E /* libBMCoreFramework.a */,
 				E7FF8BD71A18886F00D018C7 /* Headers */,
 				E71146C119FF8C1600809550 /* AddressBook.framework */,
 				E71146BF19FF8C0D00809550 /* AssetsLibrary.framework */,
@@ -1212,6 +1217,7 @@
 				E76A9BA21A52E14800FAEF3E /* NSData+Ext.m in Sources */,
 				E71146C619FF916700809550 /* ShareSDKManager.m in Sources */,
 				E76591E11A048778000B44B0 /* ACPReminder.m in Sources */,
+				E7632BD91A539F5500FFFBA4 /* UIImage+fixOrientation.m in Sources */,
 				E7E30E8219E7CB0900DFB777 /* PuzzleImage.xcdatamodeld in Sources */,
 				E75D6EDE19E909B700A1F6C9 /* PuzzleContext.swift in Sources */,
 				E79B22E41A0366BB00CAF0FA /* UIImage+Blur.m in Sources */,
@@ -1444,6 +1450,7 @@
 				ARCHS = armv7;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -1492,6 +1499,7 @@
 				ARCHS = armv7;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (

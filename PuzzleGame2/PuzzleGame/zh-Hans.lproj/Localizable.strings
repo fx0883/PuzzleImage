@@ -1,0 +1,51 @@
+/* 
+  Localizable.strings
+  PuzzleGame
+
+  Created by Dong Yiming on 11/3/14.
+  Copyright (c) 2014 FS. All rights reserved.
+*/
+"welcome"="加载中，请稍候...";
+"this is an awesome sharing" = "这是一条很厉害的分享";
+"TEXT_TEST_MSG" = "这是一条测试信息";
+"TEXT_SHARE_SUC" = "分享成功";
+"pull to refresh" = "下拉刷新...";
+"release to refresh" = "释放刷新...";
+"loading..." = "加载...";
+"last_updated" = "上次刷新时间: %@";
+"stage_not_clear" = "这关还没有玩过哦！";
+"top_record_sec" = "最快%d秒";
+
+"close" = "关闭";
+"stage_clear" = "拼图成功,用时%d秒";
+"original_picture" = "原图";
+"you_did_it" = "过关了";
+"play_happyly" = "愉快地游戏";
+"back" = "返回";
+"difficulty" = "难度:";
+"start_play" = "开玩";
+
+"share_title" = "拼图游戏";
+"share_message" = "这个游戏玩得让人疯掉了 https://itunesconnect.apple.com/WebObjects/iTunesConnect.woa/ra/ng/app/954955963";
+
+"人物" = "人物";
+"动漫" = "动漫";
+"动物" = "动物";
+"卡通" = "卡通";
+"家居" = "家居";
+"建筑" = "建筑";
+"文艺" = "文艺";
+"风景" = "风景";
+"我的图片"  = "我的图片";
+
+"选择图片来源" = "选择图片来源";
+"照像机" = "照像机";
+"图库" = "图库";
+"相册" = "相册";
+"取消" = "取消";
+
+"The difference between ordinary and extraordinary is that little extra." = "平庸与卓越之间的差异，在于那一点点的额外努力。(Jimmy Johnson)";
+"People who cannot find time for recreation are obliged sooner or later to find time for illness." = "腾不出时间娱乐的人，早晚会被迫腾出时间生病。";
+"It is better to have loved and lost than never to have loved at all." = "宁可曾经爱过而失败，也不要从来未曾有过一次爱。";
+"It doesn't matter what others think of you. It only matters what you think of yourself." = "不要太在意别人如何看待你；最重要的是你如何看待自己。";
+"Success, it is not the position where you are standing, but which direction you are going." = "成功，不是你所站的位置，而是你要去的方向。";

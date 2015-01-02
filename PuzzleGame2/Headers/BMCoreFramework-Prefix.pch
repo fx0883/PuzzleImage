@@ -1,0 +1,25 @@
+//
+//  Prefix header
+//
+//  The contents of this file are implicitly included at the beginning of every source file.
+//
+
+#ifdef __OBJC__
+    #import <UIKit/UIKit.h>
+    #import <Foundation/Foundation.h>
+
+#import "BMDefine.h"
+#import "BMCmdDefine.h"
+#import "BMBaseParam.h"
+#import "BMBaseAction.h"
+#import "BMUIApplication.h"
+#import "BMControl.h"
+#import "BMContext.h"
+
+
+#import "BMUtilDefine.h"
+#import "CoreData+MagicalRecord.h"
+#import "NSQueue.h"
+
+#import "BMCoreFramework.h"
+#endif

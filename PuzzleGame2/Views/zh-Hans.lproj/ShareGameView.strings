@@ -1,0 +1,9 @@
+
+/* Class = "IBUILabel"; text = "msg"; ObjectID = "CPo-uc-yBI"; */
+"CPo-uc-yBI.text" = "msg";
+
+/* Class = "IBUIButton"; normalTitle = "分享给朋友"; ObjectID = "SQY-GG-T0R"; */
+"SQY-GG-T0R.normalTitle" = "分享给朋友";
+
+/* Class = "IBUIButton"; normalTitle = "关闭"; ObjectID = "woj-O4-pQy"; */
+"woj-O4-pQy.normalTitle" = "关闭";

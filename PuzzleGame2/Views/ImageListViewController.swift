@@ -232,10 +232,21 @@ class ImageListViewController: BaseViewController,UIActionSheetDelegate,UIImageP
     func collectionView(collectionView: UICollectionView,
         willDisplayCell cell: UICollectionViewCell,
         forItemAtIndexPath indexPath: NSIndexPath) {
-            if (self.isEditing) {
-                cell.sway()
-            }
+//            if (self.isEditing)
+//            {
+//                cell.sway()
+//            }
+            cell.sway(self.isEditing)
     }
+    
+    func collectionView(collectionView: UICollectionView,
+        didEndDisplayingCell cell: UICollectionViewCell,
+        forItemAtIndexPath indexPath: NSIndexPath)
+    {
+        cell.sway(false)
+
+    }
+    
     
     // The cell that is returned must be retrieved from a call to -dequeueReusableCellWithReuseIdentifier:forIndexPath:
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell
@@ -268,7 +279,7 @@ class ImageListViewController: BaseViewController,UIActionSheetDelegate,UIImageP
         cell.ivDelete .addSubview(btn)
         
         ///
-        cell.layer.removeAllAnimations()
+//        cell.layer.removeAllAnimations()
         if (self.isEditing) {
             cell.ivDelete.hidden = false;
             // add Animation
@@ -276,6 +287,8 @@ class ImageListViewController: BaseViewController,UIActionSheetDelegate,UIImageP
             cell.ivDelete.hidden = true;
         }
         //        cell.sizeToFit()
+        
+//        cell.sway(true)
         return cell
     }
     

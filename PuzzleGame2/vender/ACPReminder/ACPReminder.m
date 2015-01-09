@@ -68,6 +68,10 @@ static NSString *const kACPNotificationPeriodIndex = @"kACPNotificationPeriodInd
         self.testFlagInSeconds = NO;
         self.circularTimePeriod = NO;
         self.appDomain = kACPLocalNotificationDomain;
+        
+        if ([UIApplication instancesRespondToSelector:@selector(registerUserNotificationSettings:)]) {
+            [[UIApplication sharedApplication] registerUserNotificationSettings:[UIUserNotificationSettings settingsForTypes:UIUserNotificationTypeAlert|UIUserNotificationTypeBadge|UIUserNotificationTypeSound categories:nil]];
+        }
     }
     
     return self;

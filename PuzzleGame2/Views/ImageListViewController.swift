@@ -308,7 +308,7 @@ class ImageListViewController: BaseViewController,UIActionSheetDelegate,UIImageP
         
         //self.refreshView()
         self.loadData()
-        self.mainCV .deleteItemsAtIndexPaths([NSIndexPath(forRow: index, inSection: 0)]);
+        self.mainCV.reloadSections(NSIndexSet(index: 0))
     }
     
     func collectionView(collectionView: UICollectionView!, layout collectionViewLayout: UICollectionViewLayout!, insetForSectionAtIndex section: Int) -> UIEdgeInsets{

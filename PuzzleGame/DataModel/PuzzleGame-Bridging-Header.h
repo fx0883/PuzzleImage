@@ -8,6 +8,8 @@
 #import "BMCoreFramework.h"
 #import "CoreData+MagicalRecord.h"
 
+#import "UIView+FLKAutoLayout.h"
+
 #import "ImageInfo.h"
 #import "ImageCategory.h"
 

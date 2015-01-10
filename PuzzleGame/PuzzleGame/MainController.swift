@@ -26,7 +26,7 @@ class MainController: BaseViewController {
     let strTitle:NSString = NSLocalizedString("share_title", comment: "")
     let strContent:NSString = NSLocalizedString("share_message", comment: "")
     let strDescription:NSString = NSLocalizedString("play_happyly", comment: "")
-    let imageContent:UIImage = UIImage(named: "logo")!
+    var imageContent:UIImage = UIImage(named: "logo")!
     let strUrl:NSString = "https://itunes.apple.com/us/app/puzzle-crazy/id921615471?l=zh&ls=1&mt=8"
     
     
@@ -100,6 +100,15 @@ class MainController: BaseViewController {
     
     func sharedGiftClick(sender:UIButton)
     {
+        if((arc4random()%2)==0)
+        {
+            imageContent = UIImage(named: "logo")!
+        }
+        else
+        {
+            imageContent = UIImage(named: "qrcode")!
+        }
+        
         ShareSDKManager.sharedInstance().noneUIShareAllButtonClickHandler(sender, title: strTitle, content: strContent, description: strDescription, imagecontent: imageContent, url: strUrl)
     }
     

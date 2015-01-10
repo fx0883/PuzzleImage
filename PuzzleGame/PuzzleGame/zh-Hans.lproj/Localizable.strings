@@ -5,7 +5,7 @@
   Created by Dong Yiming on 11/3/14.
   Copyright (c) 2014 FS. All rights reserved.
 */
-"welcome"="加载中，请稍候...";
+"welcome"="加载中，请稍候，值得等待哦...";
 "this is an awesome sharing" = "这是一条很厉害的分享";
 "TEXT_TEST_MSG" = "这是一条测试信息";
 "TEXT_SHARE_SUC" = "分享成功";
@@ -26,7 +26,7 @@
 "start_play" = "开玩";
 
 "share_title" = "拼图游戏";
-"share_message" = "这个游戏玩得让人疯掉了 https://itunesconnect.apple.com/WebObjects/iTunesConnect.woa/ra/ng/app/921615471";
+"share_message" = "更新了，更新了，新的版本可以自己加入喜欢的图片哦！！！https://itunes.apple.com/cn/app/feng-kuang-pin-tu-pro/id921615471?mt=8";
 
 "人物" = "人物";
 "动漫" = "动漫";
@@ -43,6 +43,9 @@
 "图库" = "图库";
 "相册" = "相册";
 "取消" = "取消";
+
+"Edit" = "编辑";
+"Done" = "完成";
 
 "The difference between ordinary and extraordinary is that little extra." = "平庸与卓越之间的差异，在于那一点点的额外努力。(Jimmy Johnson)";
 "People who cannot find time for recreation are obliged sooner or later to find time for illness." = "腾不出时间娱乐的人，早晚会被迫腾出时间生病。";

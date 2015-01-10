@@ -25,11 +25,11 @@ lastPathComponent], __LINE__, [NSString stringWithFormat:(s), ##__VA_ARGS__] )
 
 
 
-static NSString *const kACPLocalNotificationDomain = @"com.company.ACPReminder";
-static NSString *const kACPLocalNotificationApp = @"ACPLocalNotificationApp";
-static NSString *const kACPLastNotificationFired = @"ACPLastNotificationFired";
-static NSString *const kACPNotificationMessageIndex = @"ACPNotificationMessageIndex";
-static NSString *const kACPNotificationPeriodIndex = @"kACPNotificationPeriodIndex";
+static NSString *const kACPLocalNotificationDomain = @"com.CrazyPuzzle.app2";
+static NSString *const kACPLocalNotificationApp = @"CrazyPuzzleACPLocalNotificationApp";
+static NSString *const kACPLastNotificationFired = @"CrazyPuzzleACPLastNotificationFired";
+static NSString *const kACPNotificationMessageIndex = @"CrazyPuzzleACPNotificationMessageIndex";
+static NSString *const kACPNotificationPeriodIndex = @"CrazyPuzzlekACPNotificationPeriodIndex";
 
 
 @interface ACPReminder ()
@@ -68,6 +68,19 @@ static NSString *const kACPNotificationPeriodIndex = @"kACPNotificationPeriodInd
         self.testFlagInSeconds = NO;
         self.circularTimePeriod = NO;
         self.appDomain = kACPLocalNotificationDomain;
+        
+
+        
+//        UIApplication *_app = [UIApplication sharedApplication];
+//        _app.registerUserNotificationSettings
+        
+        if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 8.0)
+        {
+            if ([UIApplication instancesRespondToSelector:@selector(registerUserNotificationSettings:)]) {
+                [[UIApplication sharedApplication] registerUserNotificationSettings:[UIUserNotificationSettings settingsForTypes:UIUserNotificationTypeAlert|UIUserNotificationTypeBadge|UIUserNotificationTypeSound categories:nil]];
+            }
+        }
+
     }
     
     return self;
@@ -101,6 +114,8 @@ static NSString *const kACPNotificationPeriodIndex = @"kACPNotificationPeriodInd
     localNotification.fireDate = dateToFire;
     localNotification.alertBody = message;
     localNotification.soundName = UILocalNotificationDefaultSoundName;
+    
+    
     localNotification.applicationIconBadgeNumber = 1; // increment
     
     NSDictionary *infoDict = [NSDictionary dictionaryWithObjectsAndKeys:timePeriodIndex, kACPNotificationPeriodIndex, kACPLocalNotificationApp, self.appDomain, nil];
@@ -108,7 +123,7 @@ static NSString *const kACPNotificationPeriodIndex = @"kACPNotificationPeriodInd
     [[UIApplication sharedApplication] scheduleLocalNotification:localNotification];
     [[NSUserDefaults standardUserDefaults] setObject:timePeriodIndex forKey:kACPLastNotificationFired];
     [[NSUserDefaults standardUserDefaults] synchronize];
-    ACPLog(@"Local notification scheduled \n Message: %@", message);
+    ACPLog(@"Local notification scheduled \n Message: %@ firedata %@", message,dateToFire);
     
 }
 

@@ -13,9 +13,15 @@ class ImageListCell: UICollectionViewCell {
     @IBOutlet weak var imvComplete: UIImageView!
     var curImageInfo:ImageInfo? = nil
     @IBOutlet weak var imvMain: UIImageView!
+    
+    @IBOutlet weak var ivDelete: UIImageView!
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        self.clipsToBounds = true;
+        self.contentView.clipsToBounds = true;
     }
 
     func setimageinfo(imageinfo:ImageInfo)

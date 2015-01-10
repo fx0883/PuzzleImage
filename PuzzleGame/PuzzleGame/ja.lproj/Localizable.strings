@@ -1,0 +1,59 @@
+/* 
+  Localizable.strings
+  PuzzleGame
+
+  Created by Dong Yiming on 11/3/14.
+  Copyright (c) 2014 FS. All rights reserved.
+*/
+"welcome"="読み込み中、しばらくお待ちください...";
+"this is an awesome sharing" = "これは素晴らしい共有です!";
+"TEXT_TEST_MSG" = "これは、テストメッセージの";
+"TEXT_SHARE_SUC" = "シェアード!";
+"pull to refresh" = "リフレッシュして引いて...";
+"release to refresh" = "リフレッシュして放し...";
+"loading..." = "荷重...";
+"last_updated" = "最終更新: %@";
+"stage_not_clear" = "このいけないの支払いを固定してください!";
+"top_record_sec" = "レコードが %d 秒で、それを倒す!";
+
+"close" = "クローズ";
+"stage_clear" = "おめでとう！あなたは %d の節でそれをやった !";
+"original_picture" = "元のトークピクチャー";
+"you_did_it" = "国境を越える!";
+"play_happyly" = "Happylyを再生";
+"back" = "バック";
+"difficulty" = "難しさ:";
+"start_play" = "ベギン!";
+
+"share_title" = "クレイジーパズル";
+"share_message" = "更新され、更新され、新しいバージョンがああ私たちのお気に入りの写真に参加することができます!!!https://itunes.apple.com/cn/app/feng-kuang-pin-tu-pro/id921615471?mt=8";
+
+"人物" = "キャラクター";
+"动漫" = "アニメーション";
+"动物" = "動物";
+"卡通" = "漫画......";
+"家居" = "ホーム";
+"建筑" = "アーキテクチャ";
+"文艺" = "アート";
+"风景" = "風景";
+"我的图片"  = "私の物";
+
+
+"选择图片来源" = "選択画像ソース";
+"照像机" = "カメラ";
+"图库" = "フォトライブラリー";
+"相册" = "アルバム";
+"取消" = "キャンセル";
+
+"Edit" = "編集";
+"Done" = "終わった";
+
+"The difference between ordinary and extraordinary is that little extra." = "The difference between ordinary and extraordinary is that little extra.";
+
+"People who cannot find time for recreation are obliged sooner or later to find time for illness." = "People who cannot find time for recreation are obliged sooner or later to find time for illness.";
+
+"It is better to have loved and lost than never to have loved at all." = "It is better to have loved and lost than never to have loved at all.";
+
+"It doesn't matter what others think of you. It only matters what you think of yourself." = "It doesn't matter what others think of you. It only matters what you think of yourself.";
+
+"Success, it is not the position where you are standing, but which direction you are going." = "Success, it is not the position where you are standing, but which direction you are going.";

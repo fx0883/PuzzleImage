@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		83C70E771A61227900540764 /* qrcode.png in Resources */ = {isa = PBXBuildFile; fileRef = 83C70E761A61227900540764 /* qrcode.png */; };
 		E71145CF19FF4D7400809550 /* libGoogleAdMobAds.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E71145CD19FF4D7400809550 /* libGoogleAdMobAds.a */; };
 		E71145D019FF4D7400809550 /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = E71145CE19FF4D7400809550 /* README.txt */; };
 		E71145D319FF67CD00809550 /* FSSplashVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E71145D219FF67CD00809550 /* FSSplashVC.m */; };
@@ -133,6 +134,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		83C70E761A61227900540764 /* qrcode.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = qrcode.png; sourceTree = "<group>"; };
+		83C70E781A61388200540764 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		83C70E791A613E3500540764 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
 		E71145B019FF4D7400809550 /* DFPBannerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DFPBannerView.h; sourceTree = "<group>"; };
 		E71145B119FF4D7400809550 /* DFPExtras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DFPExtras.h; sourceTree = "<group>"; };
 		E71145B219FF4D7400809550 /* DFPInterstitial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DFPInterstitial.h; sourceTree = "<group>"; };
@@ -627,6 +631,7 @@
 		E74125B41A46B97F003E7142 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				83C70E761A61227900540764 /* qrcode.png */,
 				E76A9BA31A52FD6D00FAEF3E /* bg@2x.png */,
 				E74125B51A46B98E003E7142 /* customFolder.jpg */,
 			);
@@ -1160,6 +1165,7 @@
 				E7C7498E19FF98D700B24716 /* TencentOpenApi_IOS_Bundle.bundle in Resources */,
 				F82B2A861A08AF1400B17FAD /* InfoPlist.strings in Resources */,
 				E7C7499419FF98D700B24716 /* ShareSDKFlatShareViewUI.bundle in Resources */,
+				83C70E771A61227900540764 /* qrcode.png in Resources */,
 				F836560A1A07B1B500DC0B90 /* GameViewController.xib in Resources */,
 				E7BE2C5B19F89C7B009225F1 /* ImageListCell.xib in Resources */,
 				E75D6ED719E8C37100A1F6C9 /* ImageCategoryCollectionViewCell.xib in Resources */,
@@ -1323,6 +1329,7 @@
 			children = (
 				F82B2A871A08AF1400B17FAD /* en */,
 				F82B2A891A08AF1700B17FAD /* zh-Hans */,
+				83C70E781A61388200540764 /* ja */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -1358,6 +1365,7 @@
 			children = (
 				F8384C9E1A073A00008F69E0 /* en */,
 				F8384CA01A073A04008F69E0 /* zh-Hans */,
+				83C70E791A613E3500540764 /* ja */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";

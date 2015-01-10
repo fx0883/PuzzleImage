@@ -18,13 +18,26 @@ class ImageListViewController: BaseViewController,UIActionSheetDelegate,UIImageP
     var imageListArray:NSArray? = nil
     let kImageListCell:String = "kImageListCell"
     
+    var longPressEndEditing: UILongPressGestureRecognizer? = nil
+    var isEditing: Bool = false
+    var deleteBtn:UIBarButtonItem? = nil
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+    
+//        longPressEndEditing = UILongPressGestureRecognizer(target: self, action: Selector("actionLongPressEndEditing"))
+//        longPressEndEditing?.minimumPressDuration = 1
+//        self.view.addGestureRecognizer(longPressEndEditing!)
+        
         self.loadData()
         self.initView()
     }
+    
+//    func actionLongPressEndEditing() {
+//        self.isEditing = false
+//        self.refreshView()
+//    }
 
     override func viewDidAppear(animated: Bool)
     {
@@ -91,6 +104,9 @@ class ImageListViewController: BaseViewController,UIActionSheetDelegate,UIImageP
             
             let rItemRight:UIBarButtonItem = UIBarButtonItem(customView: rightView)
             self.navigationItem.rightBarButtonItem = rItemRight
+            
+            deleteBtn = UIBarButtonItem(title: NSLocalizedString("Edit", comment: ""), style:.Plain, target: self, action: Selector("actionEditing"))
+            self.navigationItem.leftBarButtonItem = deleteBtn
         }
         else
         {
@@ -138,7 +154,17 @@ class ImageListViewController: BaseViewController,UIActionSheetDelegate,UIImageP
     }
     
 
-
+    func actionEditing() {
+        if (self.isEditing) {
+            self.isEditing = false
+            deleteBtn?.title = NSLocalizedString("Edit", comment: "")
+        } else {
+            self.isEditing = true
+            deleteBtn?.title = NSLocalizedString("Done", comment: "")
+        }
+        
+        self.refreshView()
+    }
     
     
     func closeBtnClick(sender:UIButton!)
@@ -203,6 +229,25 @@ class ImageListViewController: BaseViewController,UIActionSheetDelegate,UIImageP
         
     }
     
+    func collectionView(collectionView: UICollectionView,
+        willDisplayCell cell: UICollectionViewCell,
+        forItemAtIndexPath indexPath: NSIndexPath) {
+//            if (self.isEditing)
+//            {
+//                cell.sway()
+//            }
+            cell.sway(self.isEditing)
+    }
+    
+    func collectionView(collectionView: UICollectionView,
+        didEndDisplayingCell cell: UICollectionViewCell,
+        forItemAtIndexPath indexPath: NSIndexPath)
+    {
+        cell.sway(false)
+
+    }
+    
+    
     // The cell that is returned must be retrieved from a call to -dequeueReusableCellWithReuseIdentifier:forIndexPath:
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell
     {
@@ -212,7 +257,38 @@ class ImageListViewController: BaseViewController,UIActionSheetDelegate,UIImageP
         //
         //        cell.backgroundColor = UIColor.redColor()
         cell.setimageinfo(imageinfoitem)
+        
+        cell.removeAllGestures()
+        
+        
+        ///
+        cell.ivDelete.userInteractionEnabled = true;
+        cell.ivDelete.tag = indexPath.row
+        let gest = UITapGestureRecognizer(target: self, action: Selector("actionDelete:"))
+        cell.ivDelete.addGestureRecognizer(gest)
+        
+        let prevBtn:UIButton? = cell.ivDelete.subviews.first as? UIButton
+        if let prevBtnCopy = prevBtn {
+            prevBtnCopy.removeFromSuperview()
+        }
+        
+        let btn = UIButton()
+        btn.frame = cell.ivDelete.bounds
+        btn.tag = indexPath.row
+        btn.addTarget(self, action: Selector("actionDelete:"), forControlEvents: UIControlEvents.TouchUpInside)
+        cell.ivDelete .addSubview(btn)
+        
+        ///
+//        cell.layer.removeAllAnimations()
+        if (self.isEditing) {
+            cell.ivDelete.hidden = false;
+            // add Animation
+        } else {
+            cell.ivDelete.hidden = true;
+        }
         //        cell.sizeToFit()
+        
+//        cell.sway(true)
         return cell
     }
     
@@ -223,6 +299,18 @@ class ImageListViewController: BaseViewController,UIActionSheetDelegate,UIImageP
     //       return 1
     //    }
     
+    func actionDelete(sender: UIView) {
+        let index: NSInteger = sender.tag
+        let imageinfoitem : ImageInfo = imageListArray!.objectAtIndex(index) as ImageInfo
+        imageinfoitem.MR_deleteEntity()
+        
+        NSManagedObjectContext.MR_defaultContext().MR_saveToPersistentStoreAndWait()
+        
+        //self.refreshView()
+        self.loadData()
+        self.mainCV.reloadSections(NSIndexSet(index: 0))
+    }
+    
     func collectionView(collectionView: UICollectionView!, layout collectionViewLayout: UICollectionViewLayout!, insetForSectionAtIndex section: Int) -> UIEdgeInsets{
         return UIEdgeInsetsMake(10, 15, 20, 15);
     }
@@ -232,8 +320,12 @@ class ImageListViewController: BaseViewController,UIActionSheetDelegate,UIImageP
     //        println("===============")
     //        return UICollectionReusableView()
     //    }
-    func collectionView(collectionView: UICollectionView, didHighlightItemAtIndexPath indexPath: NSIndexPath)
-    {
+    func collectionView(collectionView: UICollectionView, didHighlightItemAtIndexPath indexPath: NSIndexPath) {
+        
+        if (self.isEditing) {
+            return;
+        }
+        
         let imageInfoItem : ImageInfo = imageListArray!.objectAtIndex(indexPath.row) as ImageInfo
         
         let gameVC:GameViewController = GameViewController(imageInfo: imageInfoItem)

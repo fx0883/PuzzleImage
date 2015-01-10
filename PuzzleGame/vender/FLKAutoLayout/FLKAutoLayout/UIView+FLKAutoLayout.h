@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 @interface UIView (FLKAutoLayout)
 
+@property (nonatomic,strong) NSNumber *isSway;
+
 - (NSArray*)alignAttribute:(NSLayoutAttribute)attribute toAttribute:(NSLayoutAttribute)toAttribute ofView:(UIView*)view predicate:(NSString*)predicate;
 
 
@@ -65,5 +67,11 @@
 
 + (NSArray*)distributeCenterXOfViews:(NSArray*)views inView:(UIView*)view;
 + (NSArray*)distributeCenterYOfViews:(NSArray*)views inView:(UIView*)inView;
+
+-(void)removeAllGestures;
+
+-(void)sway;
+
+-(void)sway:(BOOL)isway;
 
 @end

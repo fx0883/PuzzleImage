@@ -14,6 +14,7 @@ typedef NSArray* (^viewChainingBlock)(UIView* view1, UIView* view2);
 @implementation UIView (FLKAutoLayout)
 
 
+
 #pragma mark Generic constraint methods for two views
 
 - (NSArray*)alignAttribute:(NSLayoutAttribute)attribute toView:(UIView*)view predicate:(NSString*)predicate {
@@ -260,6 +261,113 @@ typedef NSArray* (^viewChainingBlock)(UIView* view1, UIView* view2);
         [constraints addObjectsFromArray:block(views[i-1], views[i])];
     }
     return constraints;
+}
+
+-(void)removeAllGestures {
+    for (UIGestureRecognizer *gest in self.gestureRecognizers) {
+        [self removeGestureRecognizer:gest];
+    }
+}
+
+-(void)sway {
+    
+
+    
+    
+    CABasicAnimation *animationShake = [CABasicAnimation animationWithKeyPath:@"position.y"];
+    CGFloat currentCenter = self.layer.position.y;
+    CGFloat offset = 1;
+    animationShake.fromValue = @(currentCenter - offset);
+    animationShake.toValue = @(currentCenter + offset);
+    animationShake.duration = 0.2;
+    animationShake.repeatCount = INFINITY;
+    animationShake.autoreverses = YES;
+    [self.layer addAnimation:animationShake forKey:@"1"];
+    
+    CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"transform.rotation.z"];
+    CGFloat angle = M_PI / 100;
+    animation.fromValue = @(-angle);
+    animation.toValue = @(angle);
+    animation.duration = 0.1;
+    animation.repeatCount = INFINITY;
+    animation.autoreverses = YES;
+    [self.layer addAnimation:animation forKey:@"2"];
+}
+
+- (NSObject *)isSway {
+    return objc_getAssociatedObject(self, @selector(isSway));
+}
+
+- (void)setIsSway:(NSNumber *)value {
+    objc_setAssociatedObject(self, @selector(isSway), value, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+}
+
+-(void)sway:(BOOL)isway
+{
+    [self.layer removeAllAnimations];
+    if (self.isSway==nil) {
+        //self.isSway = [NSNumber numberWithBool:YES];
+        if (!isway) {
+            //self.isSway = [NSNumber numberWithBool:isway];
+            return;
+        }
+        else
+        {
+            [self sway];
+        }
+    }
+    else
+    {
+        if ([self.isSway boolValue]) {
+            if (isway) {
+                
+                return;
+            }
+            else
+            {
+                [self pauseLayer:self.layer];
+            }
+                
+        }
+        else
+        {
+            if (!isway) {
+                return;
+            }
+            else
+            {
+                [self resumeLayer:self.layer];
+            }
+        }
+    }
+    self.isSway = [NSNumber numberWithBool:isway];
+    
+
+    
+}
+
+- (void)pauseLayer:(CALayer*)layer
+{
+//    CFTimeInterval pausedTime = [layer convertTime:CACurrentMediaTime() fromLayer:nil];
+//    layer.speed = 0.0;
+//    layer.timeOffset = pausedTime;
+    [self.layer removeAnimationForKey:@"1"];
+    [self.layer removeAnimationForKey:@"2"];
+}
+
+//继续layer上面的动画
+- (void)resumeLayer:(CALayer*)layer
+{
+    //[layer removeAllAnimations];
+    
+
+    [self sway];
+//    CFTimeInterval pausedTime = [layer timeOffset];
+//    layer.speed = 1.0;
+//    layer.timeOffset = 0.0;
+//    //layer.beginTime = 0.0;
+//    CFTimeInterval timeSincePause = [layer convertTime:CACurrentMediaTime() fromLayer:nil] - pausedTime;
+//    layer.beginTime = timeSincePause;
 }
 
 @end

@@ -527,6 +527,7 @@
 		E71145AD19FF4D7400809550 /* GoogleMobileAdsSdkiOS-6.12.0 */ = {
 			isa = PBXGroup;
 			children = (
+				E75D6EDC19E9097400A1F6C9 /* Controller */,
 				E71145AE19FF4D7400809550 /* Add-ons */,
 				E71145C119FF4D7400809550 /* GADAdMobExtras.h */,
 				E71145C219FF4D7400809550 /* GADAdNetworkExtras.h */,
@@ -873,7 +874,6 @@
 			children = (
 				E711461219FF73BE00809550 /* Common */,
 				E711458819FF4C1E00809550 /* vender */,
-				E75D6EDC19E9097400A1F6C9 /* Controller */,
 				E75D6ED819E8FF5E00A1F6C9 /* OCParty */,
 				E75D6ED319E8C26700A1F6C9 /* Views */,
 				E7E30E8319E7CDB700DFB777 /* PuzzleGame-Bridging-Header.h */,

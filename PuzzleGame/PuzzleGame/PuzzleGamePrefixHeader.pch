@@ -15,6 +15,7 @@
 #import <ShareSDK/ShareSDK.h>
 #import "BMCoreFramework.h"
 #import "UIImage+Blur.h"
+#import "HMIAPHelper.h"
 
 #define PGLocalString(key) NSLocalizedString((key), @"")
 

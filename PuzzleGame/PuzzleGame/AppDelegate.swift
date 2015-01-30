@@ -13,6 +13,8 @@ let COREBUNDLENAME:String = "CoreBundle"
 //用户文件夹id
 let CUSTOMFOLDERID:String = "CUSTOMFOLDERID"
 
+let CUSTOMSETTIONGID:String = "CUSTOMSETTIONGID"
+
 let CustomFolderPath:String = NSString(format: "%@/%@", BMSandbox.sharedInstance().docPath,"CUSTOMFOLDERID");
 
 //let CustomFolderPathImage:String = "customFolder"
@@ -136,7 +138,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         
         loadCustomPic()
-        
+        loadCustomSetting()
         NSManagedObjectContext.MR_defaultContext().MR_saveToPersistentStoreAndWait()
         
 
@@ -151,15 +153,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         item.imagepath = "customFolder"
         let strDocPath:String = BMSandbox.sharedInstance().docPath
         
-//        NSFileManager *fileManager = [NSFileManager defaultManager];
-//        NSError *error = nil;
-//        NSArray *fileList = [[NSArray alloc] init];
-//        //fileList便是包含有该文件夹下所有文件的文件名及文件夹名的数组
-//        fileList = [fileManager contentsOfDirectoryAtPath:[self imageSavedPath:nil] error:&error];
-//        NSLog(@"路径==%@,fileList%@",[self imageSavedPath:nil],fileList);
-        
-        
-
         var isDir:ObjCBool = false;
         let existed:Bool = NSFileManager.defaultManager().fileExistsAtPath(CustomFolderPath, isDirectory: &isDir);
         
@@ -167,17 +160,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         {
             NSFileManager.defaultManager().createDirectoryAtPath(CustomFolderPath, withIntermediateDirectories: true, attributes: nil, error: nil);
         }
-        
-        
-        //        NSFileManager *fileManager = [NSFileManager defaultManager];
-//        BOOL existed = [fileManager fileExistsAtPath:imageDir isDirectory:&isDir];
-//        if ( !(isDir == YES && existed == YES) )
-//        {
-//            [fileManager createDirectoryAtPath:imageDir withIntermediateDirectories:YES attributes:nil error:nil];
-//        }
 
     }
     
+    func loadCustomSetting()
+    {
+        let item:ImageCategory = ImageCategory.MR_createEntity()
+        item.name="设置"
+        item.id = CUSTOMSETTIONGID
+    }
     
     
     
@@ -207,47 +198,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
             
         }
-        //
-        //    // If the expected store doesn't exist, copy the default store.
-        //    if (![fileManager fileExistsAtPath:[storeURL path]])
-        //    {
-        //    NSString *defaultStorePath = [[NSBundle mainBundle] pathForResource:[kRecipesStoreName stringByDeletingPathExtension] ofType:[kRecipesStoreName pathExtension]];
-        //
-        //    if (defaultStorePath)
-        //    {
-        //    NSError *error;
-        //    BOOL success = [fileManager copyItemAtPath:defaultStorePath toPath:[storeURL path] error:&error];
-        //    if (!success)
-        //    {
-        //    NSLog(@"Failed to install default recipe store");
-        //    }
-        //    }
-        //    }
+
     }
     
-//    - (void) copyDefaultStoreIfNecessary;
-//    {
-//    NSFileManager *fileManager = [NSFileManager defaultManager];
-//    
-//    NSURL *storeURL = [NSPersistentStore MR_urlForStoreName:kRecipesStoreName];
-//    
-//    // If the expected store doesn't exist, copy the default store.
-//    if (![fileManager fileExistsAtPath:[storeURL path]])
-//    {
-//    NSString *defaultStorePath = [[NSBundle mainBundle] pathForResource:[kRecipesStoreName stringByDeletingPathExtension] ofType:[kRecipesStoreName pathExtension]];
-//    
-//    if (defaultStorePath)
-//    {
-//    NSError *error;
-//    BOOL success = [fileManager copyItemAtPath:defaultStorePath toPath:[storeURL path] error:&error];
-//    if (!success)
-//    {
-//    NSLog(@"Failed to install default recipe store");
-//    }
-//    }
-//    }
-//    
-//    }
+
 
     func applicationWillResignActive(application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

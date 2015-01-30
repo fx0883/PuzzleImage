@@ -36,5 +36,7 @@
 #import "ShareGameView.h"
 #import "ACPReminder.h"
 
+#import "HMIAPHelper.h"
+
 
 

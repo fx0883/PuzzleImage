@@ -24,26 +24,6 @@
 +(NSString *)localStringForImageCategory:(NSString *)category {
     
     return PGLocalString(category);
-    
-//    if ([category isEqualToString:@"人物"]) {
-//        return @"";
-//    } else if ([category isEqualToString:@"动漫"]) {
-//        return @"";
-//    } else if ([category isEqualToString:@"动物"]) {
-//        return @"";
-//    } else if ([category isEqualToString:@"卡通"]) {
-//        return @"";
-//    } else if ([category isEqualToString:@"家居"]) {
-//        return @"";
-//    } else if ([category isEqualToString:@"建筑"]) {
-//        return @"";
-//    } else if ([category isEqualToString:@"文艺"]) {
-//        return @"";
-//    } else if ([category isEqualToString:@"风景"]) {
-//        return @"";
-//    }
-//    
-//    return nil;
 }
 
 @end

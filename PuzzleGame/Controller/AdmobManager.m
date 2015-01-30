@@ -9,7 +9,7 @@
 
 #define MY_BANNER_INTERSTITIAL_ID @"ca-app-pub-5934917937656240/3701960817" //
 #import "AdmobManager.h"
-
+#import "HMIAPHelper.h"
 
 
 @implementation AdmobManager
@@ -21,12 +21,12 @@ DEF_SINGLETON(AdmobManager)
 {
     self = [super init];
     if (self) {
-
-        [self loadAdmobManagerDefaultConfig];
-        [self loadBannerView];
-        [self loadInterstitial];
         
-        
+        if (![SharedIAP hasRemovedAds]) {
+            [self loadAdmobManagerDefaultConfig];
+            [self loadBannerView];
+            [self loadInterstitial];
+        }   
     }
     return self;
 }

@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		83315F021A79E4F500D28D68 /* CargoBay.m in Sources */ = {isa = PBXBuildFile; fileRef = 83315EFA1A79E4F500D28D68 /* CargoBay.m */; };
+		83315F031A79E4F500D28D68 /* HMIAPHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 83315EFD1A79E4F500D28D68 /* HMIAPHelper.m */; };
+		83315F041A79E4F500D28D68 /* IAPHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 83315EFF1A79E4F500D28D68 /* IAPHelper.m */; };
+		83315F051A79E4F500D28D68 /* IAPProduct.m in Sources */ = {isa = PBXBuildFile; fileRef = 83315F011A79E4F500D28D68 /* IAPProduct.m */; };
+		83506BC01A7A25F00097BBE1 /* CustomerSettingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83506BBE1A7A25F00097BBE1 /* CustomerSettingTableViewController.swift */; };
+		83506BC11A7A25F00097BBE1 /* CustomerSettingTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83506BBF1A7A25F00097BBE1 /* CustomerSettingTableViewController.xib */; };
 		83C70E771A61227900540764 /* qrcode.png in Resources */ = {isa = PBXBuildFile; fileRef = 83C70E761A61227900540764 /* qrcode.png */; };
 		E71145CF19FF4D7400809550 /* libGoogleAdMobAds.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E71145CD19FF4D7400809550 /* libGoogleAdMobAds.a */; };
 		E71145D019FF4D7400809550 /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = E71145CE19FF4D7400809550 /* README.txt */; };
@@ -134,6 +140,16 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		83315EF91A79E4F500D28D68 /* CargoBay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CargoBay.h; sourceTree = "<group>"; };
+		83315EFA1A79E4F500D28D68 /* CargoBay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CargoBay.m; sourceTree = "<group>"; };
+		83315EFC1A79E4F500D28D68 /* HMIAPHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMIAPHelper.h; sourceTree = "<group>"; };
+		83315EFD1A79E4F500D28D68 /* HMIAPHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMIAPHelper.m; sourceTree = "<group>"; };
+		83315EFE1A79E4F500D28D68 /* IAPHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IAPHelper.h; sourceTree = "<group>"; };
+		83315EFF1A79E4F500D28D68 /* IAPHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IAPHelper.m; sourceTree = "<group>"; };
+		83315F001A79E4F500D28D68 /* IAPProduct.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IAPProduct.h; sourceTree = "<group>"; };
+		83315F011A79E4F500D28D68 /* IAPProduct.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IAPProduct.m; sourceTree = "<group>"; };
+		83506BBE1A7A25F00097BBE1 /* CustomerSettingTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomerSettingTableViewController.swift; sourceTree = "<group>"; };
+		83506BBF1A7A25F00097BBE1 /* CustomerSettingTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomerSettingTableViewController.xib; sourceTree = "<group>"; };
 		83C70E761A61227900540764 /* qrcode.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = qrcode.png; sourceTree = "<group>"; };
 		83C70E781A61388200540764 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		83C70E791A613E3500540764 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -511,6 +527,37 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		83315EF71A79E4F500D28D68 /* Billing */ = {
+			isa = PBXGroup;
+			children = (
+				83315EF81A79E4F500D28D68 /* CargoBay */,
+				83315EFB1A79E4F500D28D68 /* IAP */,
+			);
+			path = Billing;
+			sourceTree = "<group>";
+		};
+		83315EF81A79E4F500D28D68 /* CargoBay */ = {
+			isa = PBXGroup;
+			children = (
+				83315EF91A79E4F500D28D68 /* CargoBay.h */,
+				83315EFA1A79E4F500D28D68 /* CargoBay.m */,
+			);
+			path = CargoBay;
+			sourceTree = "<group>";
+		};
+		83315EFB1A79E4F500D28D68 /* IAP */ = {
+			isa = PBXGroup;
+			children = (
+				83315EFC1A79E4F500D28D68 /* HMIAPHelper.h */,
+				83315EFD1A79E4F500D28D68 /* HMIAPHelper.m */,
+				83315EFE1A79E4F500D28D68 /* IAPHelper.h */,
+				83315EFF1A79E4F500D28D68 /* IAPHelper.m */,
+				83315F001A79E4F500D28D68 /* IAPProduct.h */,
+				83315F011A79E4F500D28D68 /* IAPProduct.m */,
+			);
+			path = IAP;
+			sourceTree = "<group>";
+		};
 		E711458819FF4C1E00809550 /* vender */ = {
 			isa = PBXGroup;
 			children = (
@@ -666,6 +713,8 @@
 				E79B22D51A035FA900CAF0FA /* ShareGameView.h */,
 				E79B22D61A035FA900CAF0FA /* ShareGameView.m */,
 				F83656161A07B3B000DC0B90 /* ShareGameView.xib */,
+				83506BBE1A7A25F00097BBE1 /* CustomerSettingTableViewController.swift */,
+				83506BBF1A7A25F00097BBE1 /* CustomerSettingTableViewController.xib */,
 			);
 			path = Views;
 			sourceTree = SOURCE_ROOT;
@@ -872,6 +921,7 @@
 		E7E30E5719E7C9CE00DFB777 /* PuzzleGame */ = {
 			isa = PBXGroup;
 			children = (
+				83315EF71A79E4F500D28D68 /* Billing */,
 				E711461219FF73BE00809550 /* Common */,
 				E711458819FF4C1E00809550 /* vender */,
 				E75D6ED819E8FF5E00A1F6C9 /* OCParty */,
@@ -1169,6 +1219,7 @@
 				F836560A1A07B1B500DC0B90 /* GameViewController.xib in Resources */,
 				E7BE2C5B19F89C7B009225F1 /* ImageListCell.xib in Resources */,
 				E75D6ED719E8C37100A1F6C9 /* ImageCategoryCollectionViewCell.xib in Resources */,
+				83506BC11A7A25F00097BBE1 /* CustomerSettingTableViewController.xib in Resources */,
 				F8384C9D1A073A00008F69E0 /* Localizable.strings in Resources */,
 				F83656141A07B3B000DC0B90 /* ShareGameView.xib in Resources */,
 				E7C7499019FF98D700B24716 /* WeiboSDK.bundle in Resources */,
@@ -1206,6 +1257,7 @@
 				E7EED53819FCF261003B27BA /* GameViewController.swift in Sources */,
 				E76591DC1A0485F1000B44B0 /* CHANGELOG.md in Sources */,
 				E71145E019FF687900809550 /* UIView+FLKAutoLayoutPredicate.m in Sources */,
+				83506BC01A7A25F00097BBE1 /* CustomerSettingTableViewController.swift in Sources */,
 				E7E30E5D19E7C9CF00DFB777 /* MainController.swift in Sources */,
 				E76591DD1A0485F1000B44B0 /* README.md in Sources */,
 				E7C2EECB19FE6B21006BB38A /* AdmobManager.m in Sources */,
@@ -1220,16 +1272,20 @@
 				E7E30E5B19E7C9CF00DFB777 /* AppDelegate.swift in Sources */,
 				E79B22E31A0366BB00CAF0FA /* ASDepthModalViewController.m in Sources */,
 				E7C2EEA019FE64C6006BB38A /* BaseViewController.m in Sources */,
+				83315F021A79E4F500D28D68 /* CargoBay.m in Sources */,
 				E76A9BA21A52E14800FAEF3E /* NSData+Ext.m in Sources */,
 				E71146C619FF916700809550 /* ShareSDKManager.m in Sources */,
 				E76591E11A048778000B44B0 /* ACPReminder.m in Sources */,
+				83315F041A79E4F500D28D68 /* IAPHelper.m in Sources */,
 				E7632BD91A539F5500FFFBA4 /* UIImage+fixOrientation.m in Sources */,
 				E7E30E8219E7CB0900DFB777 /* PuzzleImage.xcdatamodeld in Sources */,
+				83315F031A79E4F500D28D68 /* HMIAPHelper.m in Sources */,
 				E75D6EDE19E909B700A1F6C9 /* PuzzleContext.swift in Sources */,
 				E79B22E41A0366BB00CAF0FA /* UIImage+Blur.m in Sources */,
 				E79B22D71A035FA900CAF0FA /* ShareGameView.m in Sources */,
 				E7BE2C5619F899EC009225F1 /* ImageListViewController.swift in Sources */,
 				E71145D319FF67CD00809550 /* FSSplashVC.m in Sources */,
+				83315F051A79E4F500D28D68 /* IAPProduct.m in Sources */,
 				E71145DE19FF687900809550 /* FLKAutoLayoutPredicateList.m in Sources */,
 				E786A3791A01E88200EC0A94 /* ImageInfo.m in Sources */,
 				E75D6EDB19E8FFD300A1F6C9 /* CommonalityFunction.m in Sources */,

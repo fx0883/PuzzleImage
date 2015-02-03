@@ -37,6 +37,16 @@
 "文艺" = "アート";
 "风景" = "風景";
 "我的图片"  = "私の物";
+"设置" = "セットアップ";
+"移除广告" = "広告を削除";
+"恢复购买" = "回復を購入する";
+
+"Already Removed"="正常に削除";
+"Ads has already been removed,if there are still any issues,please contact us."="広告が削除されたご質問がある場合は、ご連絡ください";
+"Contact us"="お問い合わせ";
+"Okay"="グッド";
+"Can't send because no email account is configured on this device."="あなたの電子メールアカウント上記のひどい電話が設定されていない";
+"Puzzle - Feedback" = "権威フィードバック";
 
 
 "选择图片来源" = "選択画像ソース";

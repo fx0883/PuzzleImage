@@ -38,6 +38,17 @@
 "风景" = "Landscape";
 "我的图片"  = "Mine";
 
+"设置" = "Settings";
+"移除广告" = "Remove All Ads";
+"恢复购买" = "Restore Purchase";
+
+"Already Removed"="Already Removed";
+"Ads has already been removed,if there are still any issues,please contact us."="Ads has already been removed,if there are still any issues,please contact us.";
+"Contact us"="Contact us";
+"Okay"="Okay";
+"Can't send because no email account is configured on this device."="Can't send because no email account is configured on this device.";
+"Puzzle - Feedback" = "Puzzle - Feedback";
+
 
 "选择图片来源" = "Select Image Source";
 "照像机" = "Camera";

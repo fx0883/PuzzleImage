@@ -13,7 +13,7 @@ let COREBUNDLENAME:String = "CoreBundle"
 //用户文件夹id
 let CUSTOMFOLDERID:String = "CUSTOMFOLDERID"
 
-let CUSTOMSETTIONGID:String = "CUSTOMSETTIONGID"
+let CUSTOMSETTINGID:String = "CUSTOMSETTINGID"
 
 let CustomFolderPath:String = NSString(format: "%@/%@", BMSandbox.sharedInstance().docPath,"CUSTOMFOLDERID");
 
@@ -81,10 +81,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         localNotifications.createLocalNotification()
         
     }
+ 
     
     func loadData()
     {
+        var imageCategoryArray:NSArray = ImageCategory.MR_findAll();
+        for item in imageCategoryArray
+        {
+            item.MR_deleteEntity()
+        }
         
+        var imageInfoArray:NSArray = ImageInfo.MR_findAll()
+        for item in imageInfoArray
+        {
+            item.MR_deleteEntity()
+        }
         
         let bundlePath:NSString? = NSBundle.mainBundle().pathForResource(COREBUNDLENAME, ofType: "bundle")
         
@@ -139,6 +150,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         loadCustomPic()
         loadCustomSetting()
+        
+        
         NSManagedObjectContext.MR_defaultContext().MR_saveToPersistentStoreAndWait()
         
 
@@ -167,7 +180,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     {
         let item:ImageCategory = ImageCategory.MR_createEntity()
         item.name="设置"
-        item.id = CUSTOMSETTIONGID
+        item.id = CUSTOMSETTINGID
     }
     
     
@@ -218,7 +231,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillEnterForeground(application: UIApplication) {
         // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
         
-        Appirater.appEnteredForeground(true)
+        if(!HMIAPHelper.sharedInstance().hasRemovedAds())
+        {
+            Appirater.appEnteredForeground(true)
+        }
+        
     }
 
     func applicationDidBecomeActive(application: UIApplication) {

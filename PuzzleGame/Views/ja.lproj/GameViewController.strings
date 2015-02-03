@@ -1,0 +1,9 @@
+
+/* Class = "IBUILabel"; text = "3"; ObjectID = "0Vy-Sx-M2I"; */
+"0Vy-Sx-M2I.text" = "3";
+
+/* Class = "IBUILabel"; text = "Difficulty:"; ObjectID = "ELi-RQ-5tS"; */
+"ELi-RQ-5tS.text" = "難しさ:";
+
+/* Class = "IBUIButton"; normalTitle = "Go"; ObjectID = "svP-lB-OSo"; */
+"svP-lB-OSo.normalTitle" = "ベギン";

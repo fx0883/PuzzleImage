@@ -16,6 +16,7 @@ class ImageCategoryCollectionViewCell: UICollectionViewCell {
     }
 
 
+    @IBOutlet weak var stack: UIImageView!
     
     @IBOutlet weak var footLabel: UILabel!
     @IBOutlet weak var imvMain: UIImageView!
@@ -32,8 +33,17 @@ class ImageCategoryCollectionViewCell: UICollectionViewCell {
         var path:String?=nil
         if(imagecategory.imagepath == nil)
         {
-            path = "defultImageCategory.jpg"
-            imvMain.image = UIImage(named: path!)
+            if(imagecategory.id == CUSTOMSETTINGID)
+            {
+                titleLabel.text = "Settings"
+                stack.image = nil
+                imvMain.image = UIImage(named: "settings")
+            }
+            else
+            {
+                path = "defultImageCategory.jpg"
+                imvMain.image = UIImage(named: path!)
+            }
 
         }
         else

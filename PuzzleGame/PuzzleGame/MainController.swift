@@ -240,10 +240,21 @@ class MainController: BaseViewController {
     func collectionView(collectionView: UICollectionView, didHighlightItemAtIndexPath indexPath: NSIndexPath)
     {
         let imagecategoryitem : ImageCategory = imageCategoryAry!.objectAtIndex(indexPath.row) as ImageCategory
+        if(imagecategoryitem.id==CUSTOMSETTINGID)
+        {
+            let gameSettingVC:CustomerSettingTableViewController = CustomerSettingTableViewController()
+            self.navigationController?.pushViewController(gameSettingVC, animated: true)
+        }
+        else
+        {
+            let imageListVC:ImageListViewController = ImageListViewController(imgCategory: imagecategoryitem)
+            
+            self.navigationController?.pushViewController(imageListVC, animated: true)
+        }
+
+
         
-        let imageListVC:ImageListViewController = ImageListViewController(imgCategory: imagecategoryitem)
-        
-        self.navigationController?.pushViewController(imageListVC, animated: true)
+
         
     }
     

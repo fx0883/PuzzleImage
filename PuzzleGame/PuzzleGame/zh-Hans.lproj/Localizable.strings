@@ -37,6 +37,16 @@
 "文艺" = "文艺";
 "风景" = "风景";
 "我的图片"  = "我的图片";
+"设置" = "设置";
+"移除广告" = "移除广告";
+"恢复购买" = "恢复购买";
+
+"Already Removed"="移除成功";
+"Ads has already been removed,if there are still any issues,please contact us."="亲广告已经移除,如果有问题请您联系我们.";
+"Contact us"="联系我们";
+"Okay"="好的";
+"Can't send because no email account is configured on this device."="你的厉害手机上面没有配置邮件账户";
+"Puzzle - Feedback" = "权威的反馈";
 
 "选择图片来源" = "选择图片来源";
 "照像机" = "照像机";

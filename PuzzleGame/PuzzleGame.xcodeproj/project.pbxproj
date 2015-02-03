@@ -13,6 +13,7 @@
 		83315F051A79E4F500D28D68 /* IAPProduct.m in Sources */ = {isa = PBXBuildFile; fileRef = 83315F011A79E4F500D28D68 /* IAPProduct.m */; };
 		83506BC01A7A25F00097BBE1 /* CustomerSettingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83506BBE1A7A25F00097BBE1 /* CustomerSettingTableViewController.swift */; };
 		83506BC11A7A25F00097BBE1 /* CustomerSettingTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83506BBF1A7A25F00097BBE1 /* CustomerSettingTableViewController.xib */; };
+		836881C71A7CBD4D00F9F906 /* KMODecisionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 836881C61A7CBD4D00F9F906 /* KMODecisionView.m */; };
 		83C70E771A61227900540764 /* qrcode.png in Resources */ = {isa = PBXBuildFile; fileRef = 83C70E761A61227900540764 /* qrcode.png */; };
 		E71145CF19FF4D7400809550 /* libGoogleAdMobAds.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E71145CD19FF4D7400809550 /* libGoogleAdMobAds.a */; };
 		E71145D019FF4D7400809550 /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = E71145CE19FF4D7400809550 /* README.txt */; };
@@ -150,6 +151,11 @@
 		83315F011A79E4F500D28D68 /* IAPProduct.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IAPProduct.m; sourceTree = "<group>"; };
 		83506BBE1A7A25F00097BBE1 /* CustomerSettingTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomerSettingTableViewController.swift; sourceTree = "<group>"; };
 		83506BBF1A7A25F00097BBE1 /* CustomerSettingTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomerSettingTableViewController.xib; sourceTree = "<group>"; };
+		836881C51A7CBD4D00F9F906 /* KMODecisionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KMODecisionView.h; sourceTree = "<group>"; };
+		836881C61A7CBD4D00F9F906 /* KMODecisionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KMODecisionView.m; sourceTree = "<group>"; };
+		838BA5741A7D1BFE00706D9A /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		838BA5761A7D1C3E00706D9A /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/GameViewController.strings; sourceTree = "<group>"; };
+		838BA5781A7D1C7400706D9A /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/ShareGameView.strings; sourceTree = "<group>"; };
 		83C70E761A61227900540764 /* qrcode.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = qrcode.png; sourceTree = "<group>"; };
 		83C70E781A61388200540764 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		83C70E791A613E3500540764 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -689,6 +695,8 @@
 		E75D6ED319E8C26700A1F6C9 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				836881C51A7CBD4D00F9F906 /* KMODecisionView.h */,
+				836881C61A7CBD4D00F9F906 /* KMODecisionView.m */,
 				E71145D119FF67CD00809550 /* FSSplashVC.h */,
 				E71145D219FF67CD00809550 /* FSSplashVC.m */,
 				E7C2EE9E19FE64C6006BB38A /* BaseViewController.h */,
@@ -1258,6 +1266,7 @@
 				E76591DC1A0485F1000B44B0 /* CHANGELOG.md in Sources */,
 				E71145E019FF687900809550 /* UIView+FLKAutoLayoutPredicate.m in Sources */,
 				83506BC01A7A25F00097BBE1 /* CustomerSettingTableViewController.swift in Sources */,
+				836881C71A7CBD4D00F9F906 /* KMODecisionView.m in Sources */,
 				E7E30E5D19E7C9CF00DFB777 /* MainController.swift in Sources */,
 				E76591DD1A0485F1000B44B0 /* README.md in Sources */,
 				E7C2EECB19FE6B21006BB38A /* AdmobManager.m in Sources */,
@@ -1376,6 +1385,7 @@
 			children = (
 				F836561C1A07B42D00DC0B90 /* en */,
 				F836561E1A07B43800DC0B90 /* zh-Hans */,
+				838BA5741A7D1BFE00706D9A /* ja */,
 			);
 			name = LaunchScreen.xib;
 			sourceTree = "<group>";
@@ -1395,6 +1405,7 @@
 			children = (
 				F836560B1A07B1B500DC0B90 /* en */,
 				F836560E1A07B1BD00DC0B90 /* zh-Hans */,
+				838BA5761A7D1C3E00706D9A /* ja */,
 			);
 			name = GameViewController.xib;
 			sourceTree = "<group>";
@@ -1412,6 +1423,7 @@
 			children = (
 				F83656151A07B3B000DC0B90 /* en */,
 				F83656181A07B3B400DC0B90 /* zh-Hans */,
+				838BA5781A7D1C7400706D9A /* ja */,
 			);
 			name = ShareGameView.xib;
 			sourceTree = "<group>";

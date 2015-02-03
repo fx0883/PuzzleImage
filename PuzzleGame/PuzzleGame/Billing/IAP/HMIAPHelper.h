@@ -22,7 +22,7 @@
 
 #define SharedIAP     ([HMIAPHelper sharedInstance])
 
-#define PRODUCT_ID_REMOVE_ADS           @"com.dym.mathMatchFree.removeAds"
+#define PRODUCT_ID_REMOVE_ADS           @"PuzzleGamePro"
 
 #define NOTIFY_ID_REMOVE_ADS            @"NOTIFY_ID_REMOVE_ADS"
 #define NOTIFY_ID_RESTORE_ADS           @"NOTIFY_ID_RESTORE_ADS"
